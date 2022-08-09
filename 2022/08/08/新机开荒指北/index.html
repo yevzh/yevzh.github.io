@@ -598,6 +598,26 @@ git config --global user.email &quot;你的邮箱&quot;<span aria-hidden="true" 
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">npm install hexo-cli -g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>这时候我们把原来的hexoblog文件夹可以搬运过来了，搬过来之后可以npm install一下，就大功告成了。</p>
+<h2><span id="wsl2配置">WSL2配置</span></h2><p>如果不想体验虚拟机的麻烦，很多轻量级的工作是可以直接在windows系统上装一个小Linux来完成的，便捷而轻巧。受泓桥哥的启发于是决定在电脑上装WSL2，一个windows上的ubuntu子系统。</p>
+<p>首先我们在windows的powershell中通过命令行来使得支持WSL2，输入以下几条命令。</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">wsl --install
+dism.exe &#x2F;online &#x2F;enable-feature &#x2F;featurename:Microsoft-Windows-Subsystem-Linux &#x2F;all &#x2F;norestart
+dism.exe &#x2F;online &#x2F;enable-feature &#x2F;featurename:VirtualMachinePlatform &#x2F;all &#x2F;norestart
+wsl --set-default-version 2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这时候我们就已经安装好WSL2并能够查看版本了。<strong>记得重启电脑！</strong></p>
+<p>我们要做的第二步就是在电脑里安装一个Ubuntu系统。在旧电脑中我是直接通过Microsoft商店下载的，但这次我想把它装在D盘，所以我采用了命令行下载的方式。</p>
+<p>即在D盘建好相应的文件夹，然后在文件夹内打开终端，输入以下命令：</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">Invoke-WebRequest -Uri https:&#x2F;&#x2F;wsldownload.azureedge.net&#x2F;Ubuntu_2004.2020.424.0_x64.appx -OutFile Ubuntu20.04.appx -UseBasicParsing<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>然后我们会发现文件夹会多了个包，不要慌，我们继续执行命令：</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">Rename-Item .\Ubuntu20.04.appx Ubuntu.zip
+Expand-Archive .\Ubuntu.zip -Verbose<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>然后我们直接点击Ubuntu20.04可执行文件便可以开始初始化自己的Ubuntu了（设置用户名和密码）。</p>
+<p>当然我在最后一步设置Ubuntu的时候也给我报了错：<strong>WslRegisterDistribution failed with error: 0x800701bc</strong></p>
+<p>于是上网搜了搜，是因为wsl1到wsl2安装包没有升级，我们需要下载一个wsl的安装包（<a target="_blank" rel="noopener" href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi">下载地址</a>），安装即可。</p>
+<p>于是WSL2便基本成功啦，妈妈再也不用担心我不会用虚拟机(bushi)。</p>
 
                 
             </div>
