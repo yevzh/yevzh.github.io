@@ -618,6 +618,21 @@ Expand-Archive .\Ubuntu.zip -Verbose<span aria-hidden="true" class="line-numbers
 <p>当然我在最后一步设置Ubuntu的时候也给我报了错：<strong>WslRegisterDistribution failed with error: 0x800701bc</strong></p>
 <p>于是上网搜了搜，是因为wsl1到wsl2安装包没有升级，我们需要下载一个wsl的安装包（<a target="_blank" rel="noopener" href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi">下载地址</a>），安装即可。</p>
 <p>于是WSL2便基本成功啦，妈妈再也不用担心我不会用虚拟机(bushi)。</p>
+<h2><span id="github连接本地">Github连接本地</span></h2><p>之前学习github的时候踩了很多坑，甚至连怎么上传代码都不会，只会妥妥拽拽地上传，暑假才会通过git来搞事情，在这里顺便也记录下如何实现github的本地连接的，也算是半个配置或者git的应用吧。</p>
+<p>在这里我们先打开一个我们自己的仓库，在页面我们可以看到该仓库的ssh链接，我们复制下来。</p>
+<p><img src="/2022/08/08/%E6%96%B0%E6%9C%BA%E5%BC%80%E8%8D%92%E6%8C%87%E5%8C%97/14.png"></p>
+<p>然后我们在自己的文件夹内用git bash来输入命令，从而将github上的仓库给搞到本地来。</p>
+<p>命令格式如图所示：</p>
+<p><img src="/2022/08/08/%E6%96%B0%E6%9C%BA%E5%BC%80%E8%8D%92%E6%8C%87%E5%8C%97/15.png"></p>
+<p>下面我们这个文件夹就和github上关联起来了，如果我们要添加文件的话，我们可以直接用add命令：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">git add README.md<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>如果我们想要整体更新到网站上，我们采用下面的连招：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">1. git add .
+2. git commit -m &quot;你的描述，尽量是修改的内容&quot;
+3. git push -u origin master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>这样一发操作下来我们就可以方便地更新github了，从而更好更方便地实现代码管理。</p>
 
                 
             </div>
