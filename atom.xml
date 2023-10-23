@@ -6,7 +6,7 @@
   <link href="https://yevzh.github.io/atom.xml" rel="self"/>
   
   <link href="https://yevzh.github.io/"/>
-  <updated>2023-08-16T18:32:48.741Z</updated>
+  <updated>2023-10-23T01:17:54.348Z</updated>
   <id>https://yevzh.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Paper-Reading-Notes</title>
+    <link href="https://yevzh.github.io/2023/10/23/Paper-Reading-Notes/"/>
+    <id>https://yevzh.github.io/2023/10/23/Paper-Reading-Notes/</id>
+    <published>2023-10-23T01:16:36.000Z</published>
+    <updated>2023-10-23T01:17:54.348Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;&lt;span id=&quot;research-paper-notes&quot;&gt;Research-paper-notes&lt;/span&gt;&lt;/h1&gt;&lt;p&gt;zwm的论文阅读笔记，聚焦于recommender systems, educational data mining,</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Notes" scheme="https://yevzh.github.io/tags/Notes/"/>
+    
+  </entry>
   
   <entry>
     <title>大三下总结与夏令营回忆</title>
