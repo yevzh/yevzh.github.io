@@ -517,14 +517,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    1.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    6 分
                 </div>
                 
 
@@ -611,6 +611,12 @@
 <p>阶段2中冻结特征矩阵，更新模型中的参数。</p>
 </li>
 </ul>
+<h2><span id="ctrl-connect-collaborative-and-language-model-for-ctr-prediction">CTRL: Connect Collaborative and Language Model for CTR Prediction</span></h2><p>这是华为的一个工作，表格数据和转换后的文本被视作两种不同的模态，分别输入到协同CTR模型和预训练语言模型中。主要的工作就在于一个对齐，然后对CTR模型进行微调。相当于是找一个对齐的东西辅助tune CTR模型。<strong>在线推理时，只用轻量级微调后的CTR模型。</strong></p>
+<p><img src="/2023/10/23/Paper-Reading-Notes/ctrl1.png" alt="ctrl1"></p>
+<p>他这里好像没有具体写用什么方法进行text的embedding，应该就是可以直接用LLM做一个抽取表征。两边的模型分别得到抽取的特征：<br>$$<br>h^{tab}=M_{col}(x^{tab})W^{tab}+b^{tab}<br>\<br>h^{text}=M_{sem}(x^{text})W^{text}+b^{text}<br>$$<br>这边就是应用contrastive learning的方法分别对text和tab两边的数据用loss。For example，$L^{text2tab}=-\frac{1}{N}\sum\limits_{k=1}^Nlos\frac{exp(sim(h_k^{text},h_k^{tab})/\tau)}{\sum\limits_{j=1}^Nexp(sim(h_k^{text},h_j^{tab})/\tau)}$</p>
+<p>这边其实提到了fine-grained对齐，也就是加一层W和b。</p>
+<p>最后的finetune其实就是仅仅用CTR模型。</p>
+<p>这篇文章好像构思不算复杂，其实就是应用了一个对齐，然后只tune一边，利用语言模型这边去辅助调整一下CTR模型。这个思路如果应用于CDM的话应该实现起来是不难的，就是改变一下训练的模式，以及加入对比学习（抽取隐层已经写好了）。但是这篇文章的代码还没有开源（</p>
 
                 
             </div>
@@ -1139,7 +1145,7 @@ gitment.render('gitment-content');
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">108.7k</span>
+                        class="white-color">109.1k</span>
             
             
             
