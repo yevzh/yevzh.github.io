@@ -510,21 +510,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-10-23
+                    2023-10-24
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    858
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    5 分
                 </div>
                 
 
@@ -578,6 +578,37 @@
 </li>
 <li><p>相比较而言，sequence-sequence用的就是老套路了，增强序列与其他序列进行对比：</p>
 <p><img src="/2023/10/23/Paper-Reading-Notes/unisrec3.png" alt="unisrec-3"></p>
+</li>
+</ul>
+<p>这篇文章主要是针对跨域的序列预测，这边用了对比学习的方法去分别对sequence和item操作，感觉可以借鉴到KT上，主要还是结合text先进行adaptation。其实这个方法好像挺common的。</p>
+<h2><span id="text-is-all-you-need-learning-language-representations-for-sequential-recommendation">Text Is All You Need: Learning Language Representations for Sequential Recommendation</span></h2><p>这篇文章也是讲序列预测的，是lqy学长在组会分享过的一篇文章。这篇文章也是利用了文本，将每个item整理成一个sentence，将item sequence formulate成一个sequence of sentences。这篇文章提出的框架叫做<strong>RECFORMER</strong>。</p>
+<p>像这种用文本的motivation好像都提了如果基于ID就不能用于跨域推荐和场景的迁移。具体的做法是将物品表示为键值属性对，可以包含各个方面的文本信息，用Longformer对序列进行编码。</p>
+<p>对于item i，它的sentence可以表示为$T_i={k_1, v_1, k_2, v_2,\cdots,k_m,v_m}$</p>
+<p>model input 表示为$X={[CLS],T_n, T_{n-1}, \cdots,T_1}$</p>
+<p>它这里embedding分为四个，先看图：</p>
+<p><img src="/2023/10/23/Paper-Reading-Notes/recformer1.png" alt="recformer"></p>
+<ul>
+<li>Token Embedding：表征对应的token，商品属性中文字token对应的embedding，这样就脱离了商品ID的embedding了</li>
+<li>Token Position Embedding：表征token在序列中的位置</li>
+<li>Token type Embedding：表征token的类型，有三种，分别是CLS，key，和value</li>
+<li>Item Position Embedding：表征商品在序列中的位置</li>
+</ul>
+<p>对于给定序列中的一个word w，表征表示为$E_w = LayerNorm(A_w+B_w+C_w+D_w)$</p>
+<p>序列表征表示为$E_X=[E_{[CLS]},E_{w_1},\cdots,E_{w_l}]$</p>
+<p>Recformer计算d维单词表征的方式$[h_{CLS},h_{w_1},\cdots,h_{w_l}]=Longformer(E_X)$</p>
+<p>如果对于单个商品，那么就构造sentence$X= {[CLS], T_i}$得到商品表征$h_i$</p>
+<p>那么就用余弦相似性来预测下一个商品（序列和item）</p>
+<p>我们关注这个框架的学习模式，要学习哪些参数，固定哪些东西。</p>
+<ul>
+<li><p>首先是预训练：</p>
+<ul>
+<li>Masked Language Modeling(MLM)</li>
+<li>item-item对比学习。使用真实的下一个交互item作为正样本。负样本采用当前batch其他序列中对应的真实的下一个交互item。</li>
+</ul>
+</li>
+<li><p>两阶段微调。保持一个商品特征矩阵，<strong>这个矩阵是从Recformer中编码得到的</strong>。</p>
+<p>阶段1中每个epoch会把item进行编码，更新矩阵，相当于重新encode，模型和矩阵都会更新；</p>
+<p>阶段2中冻结特征矩阵，更新模型中的参数。</p>
 </li>
 </ul>
 
@@ -1108,7 +1139,7 @@ gitment.render('gitment-content');
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">108.1k</span>
+                        class="white-color">108.7k</span>
             
             
             
