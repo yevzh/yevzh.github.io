@@ -510,21 +510,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-10-26
+                    2023-10-28
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.3k
+                    2.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    9 分
                 </div>
                 
 
@@ -626,6 +626,13 @@
 <p>这篇文章还提到了可以将recent和semantically similar的进行混合，可以更好预测，这都是后面的trick了，可以不管。</p>
 <p>还有一个点在于，这篇文章提到了few-shot，在这里few-shot的意思是选取N个这样的prompt（即（x,y）对）来tune大模型，从而让大模型更好地去做预测，效果是出乎意料的好，可以击败原来full shot的performance.</p>
 <p>总而言之，这篇文章好像没有什么框架上的创新点，主要就是在于prompt engineering，用了retrieval的方法去构建prompt让大模型直接去预测。但是如果用在教育上，其实教育的数据是否能支撑这样的方法其实是未知的，文本信息毕竟不如推荐的丰富。</p>
+<h2><span id="llm-rec-personalized-recommendation-via-prompting-large-language-models">LLM-Rec: Personalized Recommendation via Prompting Large Language Models</span></h2><p>这篇文章的核心也是用LLM来做prompt engineering来产生augmented text。主要还是看下作者是如何用LLM去产生prompt的。</p>
+<p><img src="/2023/10/23/Paper-Reading-Notes/llmrec1.png" alt="llmrec1"></p>
+<p>这边需要注意的是engagement-guided prompting，这边会通过寻找几个相似的item，然后总结他们的共性。然后结合recommendation的prompting产生最终的model output作为增强文本。这大概就是本篇工作最核心的东西了。</p>
+<p>这篇文章的encoder采用的是sentence-BERT，倒是用过；但是这边值得注意的是，选取相似的item这边并不是通过简单的semantic的方式，而是用importance measurement，具体是采用Personalized PageRank score的方式来做的，这个倒是没见过。</p>
+<p>这里的user embedding采用128维的向量，然后item侧则把增强向量和原始的向量拼接然后经过MLP最后得到128维度。最后加入baseline，这里采用的是DCN-V2的模型。</p>
+<p><img src="/2023/10/23/Paper-Reading-Notes/llmrec2.png" alt="llmrec2"></p>
+<p>这大概就是整个的框架。这篇文章和先前看的KAR是有一定的相似之处的同样是模型无关的，核心在于prompt engineering，但是好像这个工作更加简单，直接连结过MLP就行了，其实感觉是有点草率的。</p>
 
                 
             </div>
@@ -1154,7 +1161,7 @@ gitment.render('gitment-content');
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">109.5k</span>
+                        class="white-color">109.9k</span>
             
             
             
