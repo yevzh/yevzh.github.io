@@ -523,10 +523,10 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <h1 tabindex="-1"><span id="computer-graphics-icu">Computer Graphics ICU</span></h1>
+            <h1><span id="computer-graphics-icu">Computer Graphics ICU</span></h1>
 <p>计算机图形学期末笔记整理</p>
-<h2 tabindex="-1"><span id="lecture_1_pipeline">Lecture_1_pipeline</span></h2>
-<h3 tabindex="-1"><span id="rendering-pipeline">Rendering Pipeline</span></h3>
+<h2><span id="lecture_1_pipeline">Lecture_1_pipeline</span></h2>
+<h3><span id="rendering-pipeline">Rendering Pipeline</span></h3>
 <p><img lazyload src="/images/loading.svg" data-src="1.png" alt="1"></p>
 <ul>
 <li>
@@ -544,12 +544,12 @@
 <li>Fragment Processing: Process individual fragments.</li>
 <li>Output Merging: Combine the fragments of all primitives (in 3D space) into 2D color-pixel for the display</li>
 </ul>
-<h3 tabindex="-1"><span id="z-buffer">Z-Buffer</span></h3>
+<h3><span id="z-buffer">Z-Buffer</span></h3>
 <p><img lazyload src="/images/loading.svg" data-src="3.png" alt="3"></p>
 <p><img lazyload src="/images/loading.svg" data-src="4.png" alt="4"></p>
-<h2 tabindex="-1"><span id="lecture_2_transformation">Lecture_2_transformation</span></h2>
+<h2><span id="lecture_2_transformation">Lecture_2_transformation</span></h2>
 <p>Basic 2-D transformations: refer to my hand-written notes.</p>
-<h3 tabindex="-1"><span id="homogenous-coordinates-均质坐标">Homogenous Coordinates 均质坐标</span></h3>
+<h3><span id="homogenous-coordinates-均质坐标">Homogenous Coordinates 均质坐标</span></h3>
 <p>Add a third coordinate (w-coordinate)</p>
 <p>2D point = (𝑥, 𝑦, 1) 𝑇                2D vector = (𝑥, 𝑦, 0)</p>
 <p><img lazyload src="/images/loading.svg" data-src="5.png" alt="5"></p>
@@ -557,7 +557,7 @@
 <p><img lazyload src="/images/loading.svg" data-src="6.png" alt="6"></p>
 <p>3D Rotations——Rodrigues’ Rotation Formula：</p>
 <p><img lazyload src="/images/loading.svg" data-src="7.png" alt="7"></p>
-<h3 tabindex="-1"><span id="viewing-and-perspective">Viewing and Perspective</span></h3>
+<h3><span id="viewing-and-perspective">Viewing and Perspective</span></h3>
 <p>viewing 观测  projection 投影 （Orthographic 正交）（Perspective 透视）</p>
 <p>standard camera space:</p>
 <p><img lazyload src="/images/loading.svg" data-src="8.png" alt="8"></p>
@@ -579,8 +579,8 @@
 <p><img lazyload src="/images/loading.svg" data-src="18.png" alt="18"></p>
 <p>What’s next after MVP?</p>
 <p>Canonical Cube to Screen.</p>
-<h2 tabindex="-1"><span id="lecture_3_rasterization">Lecture_3_rasterization</span></h2>
-<h3 tabindex="-1"><span id="aliasing-and-antialiasing-走样失真">Aliasing and Antialiasing 走样？失真？</span></h3>
+<h2><span id="lecture_3_rasterization">Lecture_3_rasterization</span></h2>
+<h3><span id="aliasing-and-antialiasing-走样失真">Aliasing and Antialiasing 走样？失真？</span></h3>
 <p>Why triangles?</p>
 <ul>
 <li>Most basic polygon - Break up other polygons</li>
@@ -605,7 +605,7 @@
 <p>原理？Convolution 卷积求平均</p>
 <p><img lazyload src="/images/loading.svg" data-src="21.png" alt="21"></p>
 <p><strong>Sampling = Repeating Frequency Contents</strong></p>
-<h3 tabindex="-1"><span id="antialiasing">Antialiasing</span></h3>
+<h3><span id="antialiasing">Antialiasing</span></h3>
 <p>how to?</p>
 <ul>
 <li>
@@ -628,13 +628,13 @@
 <p>Take NxN samples in each pixel. Average the NxN samples “inside” each pixel. This is the corresponding signal emitted by the display</p>
 </li>
 </ul>
-<h2 tabindex="-1"><span id="lecture_4_illumination-amp-shading">Lecture_4_illumination &amp; shading</span></h2>
+<h2><span id="lecture_4_illumination-amp-shading">Lecture_4_illumination &amp; shading</span></h2>
 <p>光照和着色</p>
 <p>shading models: To describe how the object’s color should vary based on factors such as surface, orientation, view direction, and light</p>
 <p>Gooch Shading Model</p>
 <p><img lazyload src="/images/loading.svg" data-src="22.png" alt="22"></p>
 <p><img lazyload src="/images/loading.svg" data-src="23.png" alt="23"></p>
-<h3 tabindex="-1"><span id="light-sources">Light sources</span></h3>
+<h3><span id="light-sources">Light sources</span></h3>
 <ul>
 <li>
 <p>directional lights 方向光</p>
@@ -647,9 +647,9 @@
 <p><img lazyload src="/images/loading.svg" data-src="26.png" alt="26"></p>
 </li>
 </ul>
-<h3 tabindex="-1"><span id="transparency">Transparency</span></h3>
+<h3><span id="transparency">Transparency</span></h3>
 <p><img lazyload src="/images/loading.svg" data-src="27.png" alt="27"></p>
-<h3 tabindex="-1"><span id="blinn-phong-reflectance-model">Blinn-Phong Reflectance Model</span></h3>
+<h3><span id="blinn-phong-reflectance-model">Blinn-Phong Reflectance Model</span></h3>
 <p>主要搞三个东西：Specular highlights 镜面高光 Diffuse reflection 漫反射 Ambient lighting 环境光</p>
 <p><img lazyload src="/images/loading.svg" data-src="28.png" alt="28"></p>
 <p><img lazyload src="/images/loading.svg" data-src="29.png" alt="29"></p>
@@ -658,7 +658,7 @@
 <p>cosine power plot: increasing p narrows the reflection lobe.</p>
 <p><img lazyload src="/images/loading.svg" data-src="32.png" alt="32"></p>
 <p><img lazyload src="/images/loading.svg" data-src="33.png" alt="33"></p>
-<h3 tabindex="-1"><span id="shading-frequencies">Shading Frequencies</span></h3>
+<h3><span id="shading-frequencies">Shading Frequencies</span></h3>
 <ul>
 <li>
 <p>Flat shading: triangle face is flat: one normal vector(not good for smooth surfaces)</p>
@@ -673,12 +673,12 @@
 </li>
 </ul>
 <p>phone 是最贵的模型(frequency 最大)，blinn-phong 比漫反射贵</p>
-<h3 tabindex="-1"><span id="recap-of-the-graphics-pipeline">Recap of the Graphics Pipeline</span></h3>
+<h3><span id="recap-of-the-graphics-pipeline">Recap of the Graphics Pipeline</span></h3>
 <p><img lazyload src="/images/loading.svg" data-src="35.png" alt="35"></p>
-<h2 tabindex="-1"><span id="lecture_5_texturing-mapping">Lecture_5_texturing mapping</span></h2>
+<h2><span id="lecture_5_texturing-mapping">Lecture_5_texturing mapping</span></h2>
 <p>In computer graphics, texturing is a process that takes a surface and modifies its appearance at each location using some image, function, or other data source.</p>
 <p>In order to use textures, three steps: <strong>acquisition, texture mapping, texture filtering</strong></p>
-<h3 tabindex="-1"><span id="acquisition">Acquisition</span></h3>
+<h3><span id="acquisition">Acquisition</span></h3>
 <ul>
 <li>
 <p>texture compositing 纹理合成</p>
@@ -700,7 +700,7 @@
 </ul>
 </li>
 </ul>
-<h3 tabindex="-1"><span id="texture-mapping">Texture Mapping</span></h3>
+<h3><span id="texture-mapping">Texture Mapping</span></h3>
 <p>Manually specify texture coordinates:</p>
 <ul>
 <li>Assign a texture coordinate to each vertex</li>
@@ -708,7 +708,7 @@
 </ul>
 <p>Mesh parameterization : Construct a mapping from the 3D model to the plane domain</p>
 <p>Conformal parameterization and area retention: Conformal parameterization requires maintaining right angles</p>
-<h3 tabindex="-1"><span id="text-filtering">Text Filtering</span></h3>
+<h3><span id="text-filtering">Text Filtering</span></h3>
 <ul>
 <li>
 <p>Isotropic filtering 各向同性过滤</p>
@@ -725,17 +725,17 @@
 <p><img lazyload src="/images/loading.svg" data-src="47.png" alt="47"></p>
 <p>texels/pixels&lt;1 近处，一个结构包含多个像素 Magnification(blurring)</p>
 <p>texels/pixels&gt;1 远处，一个像素包含多个结构 Minification(mipmapping)</p>
-<h3 tabindex="-1"><span id="bump-mapping">Bump Mapping</span></h3>
+<h3><span id="bump-mapping">Bump Mapping</span></h3>
 <p><img lazyload src="/images/loading.svg" data-src="48.png" alt="48"></p>
 <p><img lazyload src="/images/loading.svg" data-src="49.png" alt="49"></p>
 <p>通过改变表面的法向来改变光照着色的效果，从而实现凹凸贴图。不改变几何</p>
 <p><img lazyload src="/images/loading.svg" data-src="50.png" alt="50"></p>
 <p><img lazyload src="/images/loading.svg" data-src="51.png" alt="51"></p>
-<h3 tabindex="-1"><span id="displacement-mapping">Displacement Mapping</span></h3>
+<h3><span id="displacement-mapping">Displacement Mapping</span></h3>
 <p>Realistically move surface points with texture maps.</p>
 <p>Before visibility can be determined, the geometry must be shifted</p>
 <p>Must be done at preprocessing, not hardware rendering</p>
-<h2 tabindex="-1"><span id="lecture_6_shadow">Lecture_6_shadow</span></h2>
+<h2><span id="lecture_6_shadow">Lecture_6_shadow</span></h2>
 <p>Shadow is important: With the hint of the shadow, we can clearly know the position of the ball. Different shadows can correspond to different pellet positions</p>
 <p><img lazyload src="/images/loading.svg" data-src="52.png" alt="52"></p>
 <p><img lazyload src="/images/loading.svg" data-src="53.png" alt="53"></p>
@@ -749,7 +749,7 @@
 <p>however, under finite extent lights (usually area lights), it is often difficult to determine the umbra and penumbra regions, because this means that fan 1 needs to solve the visible relationships in 3D space. This is a very difficult question.</p>
 </li>
 </ul>
-<h3 tabindex="-1"><span id="planar-shadow">Planar Shadow</span></h3>
+<h3><span id="planar-shadow">Planar Shadow</span></h3>
 <p>When the shadow of an object is projected onto a flat surface, a planar shadow is produced, and a planar shadow is one of the simplest kinds of shadows.</p>
 <p>In the shadow projection method, objects in three-dimensional space need to be drawn twice to achieve a shadow effect. Specifically, a matrix is used to project points on the surface of the occlusion onto the plane on which the shadow needs to be calculated</p>
 <p><img lazyload src="/images/loading.svg" data-src="54.png" alt="54"></p>
@@ -765,7 +765,7 @@
 <p>Imagine using the light source as the viewpoint: the area seen from the light source is drawn; The area that cannot be seen from the light source is the shadow</p>
 <p><img lazyload src="/images/loading.svg" data-src="62.png" alt="62"></p>
 <p>disadvantages: Objects cannot cast shadows onto themselves</p>
-<h3 tabindex="-1"><span id="shadow-rendering-algorithm">Shadow rendering algorithm</span></h3>
+<h3><span id="shadow-rendering-algorithm">Shadow rendering algorithm</span></h3>
 <ul>
 <li>
 <p>Shadow volume algorithm</p>
@@ -811,7 +811,7 @@
 <p>变形，影子浮动</p>
 </li>
 </ul>
-<h2 tabindex="-1"><span id="lecture_7_geometry">Lecture_7_geometry</span></h2>
+<h2><span id="lecture_7_geometry">Lecture_7_geometry</span></h2>
 <p>two categories: <strong>Implicit</strong> and <strong>explicit</strong></p>
 <p>Implicit: Level sets, Algebraic surface, Distance functions</p>
 <p>Explicit: Point cloud, Polygon mesh, Subdivision, NURBS</p>
@@ -827,7 +827,7 @@
 <p><img lazyload src="/images/loading.svg" data-src="72.png" alt="72"></p>
 </li>
 </ul>
-<h3 tabindex="-1"><span id="implicit-representations">Implicit Representations</span></h3>
+<h3><span id="implicit-representations">Implicit Representations</span></h3>
 <p>Constructive Solid Geometry(Implicit)</p>
 <p><img lazyload src="/images/loading.svg" data-src="73.png" alt="73"></p>
 <p>Distance functions(Implicit)</p>
@@ -836,7 +836,7 @@
 <p><img lazyload src="/images/loading.svg" data-src="74.png" alt="74"></p>
 <p><img lazyload src="/images/loading.svg" data-src="75.png" alt="75"></p>
 <p>​	<img lazyload src="/images/loading.svg" data-src="76.png" alt="76"></p>
-<h3 tabindex="-1"><span id="explicit-representations">Explicit Representations</span></h3>
+<h3><span id="explicit-representations">Explicit Representations</span></h3>
 <ul>
 <li>
 <p>Point cloud</p>
@@ -853,7 +853,7 @@
 <p>Perhaps most common representation in graphics</p>
 </li>
 </ul>
-<h3 tabindex="-1"><span id="bezier-curves-贝塞尔曲线">Bezier Curves 贝塞尔曲线</span></h3>
+<h3><span id="bezier-curves-贝塞尔曲线">Bezier Curves 贝塞尔曲线</span></h3>
 <p><img lazyload src="/images/loading.svg" data-src="77.png" alt="77"></p>
 <p><img lazyload src="/images/loading.svg" data-src="78.png" alt="78"></p>
 <p><img lazyload src="/images/loading.svg" data-src="79.png" alt="79"></p>
@@ -862,12 +862,12 @@
 <p>Instead, <strong>chain many low-order Bezier curve.</strong></p>
 <p>贝塞尔曲面：用曲线生成</p>
 <p><img lazyload src="/images/loading.svg" data-src="81.png" alt="81"></p>
-<h2 tabindex="-1"><span id="lecture_8_geometry_cont">Lecture_8_geometry_cont</span></h2>
+<h2><span id="lecture_8_geometry_cont">Lecture_8_geometry_cont</span></h2>
 <p><img lazyload src="/images/loading.svg" data-src="82.png" alt="82"></p>
 <p><img lazyload src="/images/loading.svg" data-src="83.png" alt="83"></p>
-<h3 tabindex="-1"><span id="local-mesh-operations">Local Mesh Operations</span></h3>
+<h3><span id="local-mesh-operations">Local Mesh Operations</span></h3>
 <p><img lazyload src="/images/loading.svg" data-src="84.png" alt="84"></p>
-<h3 tabindex="-1"><span id="global-mesh-operations">Global Mesh Operations</span></h3>
+<h3><span id="global-mesh-operations">Global Mesh Operations</span></h3>
 <ul>
 <li>
 <p>Mesh subdivision(upsampling)</p>
@@ -892,7 +892,7 @@
 <p>choose point that minimize the quadric error</p>
 </li>
 </ul>
-<h2 tabindex="-1"><span id="lecture_9_raytracing">Lecture_9_raytracing</span></h2>
+<h2><span id="lecture_9_raytracing">Lecture_9_raytracing</span></h2>
 <p>Rasterization couldn’t handle global effect well, and especially when the light bounces more than once.</p>
 <p>Ray tracing is accurate, but is very slow.</p>
 <p>Rasterization: real time     raytracing: offline</p>
@@ -903,7 +903,7 @@
 <p>Recursive Ray Tracing</p>
 <p><img lazyload src="/images/loading.svg" data-src="92.png" alt="92"></p>
 <p>递归地跟踪射线，直到到达非镜面曲面或者递归终止深度。</p>
-<h3 tabindex="-1"><span id="ray-intersection">Ray Intersection</span></h3>
+<h3><span id="ray-intersection">Ray Intersection</span></h3>
 <p><img lazyload src="/images/loading.svg" data-src="93.png" alt="93"></p>
 <p><img lazyload src="/images/loading.svg" data-src="94.png" alt="94"></p>
 <p>如何判定相交？</p>
@@ -937,7 +937,7 @@
 <p><strong>With box!</strong></p>
 <p><img lazyload src="/images/loading.svg" data-src="108.png" alt="108"></p>
 <p><img lazyload src="/images/loading.svg" data-src="109.png" alt="109"></p>
-<h3 tabindex="-1"><span id="accelerating">Accelerating</span></h3>
+<h3><span id="accelerating">Accelerating</span></h3>
 <p><img lazyload src="/images/loading.svg" data-src="110.png" alt="110"></p>
 <p><img lazyload src="/images/loading.svg" data-src="111.png" alt="111"></p>
 <p>Uniform Spatial Partitions(Grid)</p>
@@ -960,8 +960,8 @@
 <p><img lazyload src="/images/loading.svg" data-src="114.png" alt="114"></p>
 </li>
 </ul>
-<h2 tabindex="-1"><span id="lecture_12_raytracing_cont">Lecture_12_raytracing_cont</span></h2>
-<h3 tabindex="-1"><span id="radiometry">Radiometry</span></h3>
+<h2><span id="lecture_12_raytracing_cont">Lecture_12_raytracing_cont</span></h2>
+<h3><span id="radiometry">Radiometry</span></h3>
 <p>the basics of Path Tracing</p>
 <p><img lazyload src="/images/loading.svg" data-src="115.png" alt="115"></p>
 <p><img lazyload src="/images/loading.svg" data-src="116.png" alt="116"></p>
@@ -1000,7 +1000,7 @@
 </li>
 </ul>
 <p><img lazyload src="/images/loading.svg" data-src="124.png" alt="124"></p>
-<h3 tabindex="-1"><span id="bidirectional-reflectance-distribution-function">Bidirectional Reflectance Distribution Function</span></h3>
+<h3><span id="bidirectional-reflectance-distribution-function">Bidirectional Reflectance Distribution Function</span></h3>
 <p>Radiance from direction ωi turns into the power E that dA receives.</p>
 <p>Then power E will become the radiance to any other direction ωo.</p>
 <p><img lazyload src="/images/loading.svg" data-src="125.png" alt="125"></p>
@@ -1014,8 +1014,6 @@
 <p><img lazyload src="/images/loading.svg" data-src="132.png" alt="132"></p>
 <p><img lazyload src="/images/loading.svg" data-src="133.png" alt="133"></p>
 <p><img lazyload src="/images/loading.svg" data-src="134.png" alt="134"></p>
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
 
         </div>
 
@@ -1189,7 +1187,7 @@
                     </span>
                     
                         <span>
-                            共 109.9k 字
+                            共 109.8k 字
                         </span>
                     
                 </p>

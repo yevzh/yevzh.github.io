@@ -523,11 +523,11 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <h1 tabindex="-1"><span id="qt-gui-programming-notes">Qt GUI Programming Notes</span></h1>
+            <h1><span id="qt-gui-programming-notes">Qt GUI Programming Notes</span></h1>
 <ul>
 <li>Yevzwming  Dec.1 2021</li>
 </ul>
-<h2 tabindex="-1"><span id="1-helloworld">1. hello,world</span></h2>
+<h2><span id="1-helloworld">1. hello,world</span></h2>
 <p>创建一个 widget application, 先认识一下这个main函数：</p>
 <p>我们将 main.cpp 修改如下：</p>
 <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;QApplication&gt;
@@ -544,7 +544,7 @@ int main(int argc, char *argv[])
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><img lazyload src="/images/loading.svg" data-src="http://files.devbean.net/images/2012/08/qt-hello-world.png" alt="Qt HelloWorld 程序运行结果"></p>
 <p>前两行是 C++ 的 include 语句，这里我们引入的是<code>QApplication</code>以及<code>QLabel</code>这两个类。<code>main()</code>函数中第一句是创建一个<code>QApplication</code>类的实例。对于 Qt 程序来说，<code>main()</code>函数一般以创建 application 对象（GUI 程序是<code>QApplication</code>，非 GUI 程序是<code>QCoreApplication</code>。<code>QApplication</code>实际上是<code>QCoreApplication</code>的子类。）开始，后面才是实际业务的代码。这个对象用于管理 Qt 程序的生命周期，开启事件循环，这一切都是必不可少的。在我们创建了<code>QApplication</code>对象之后，直接创建一个<code>QLabel</code>对象，构造函数赋值“Hello, world”，当然就是能够在<code>QLabel</code>上面显示这行文本。最后调用<code>QLabel</code>的<code>show()</code>函数将其显示出来。<code>main()</code>函数最后，调用<code>app.exec()</code>，开启事件循环。我们现在可以简单地将事件循环理解成一段无限循环。正因为如此，我们在栈上构建了<code>QLabel</code>对象，却能够一直显示在那里（试想，如果不是无限循环，<code>main()</code>函数立刻会退出，<code>QLabel</code>对象当然也就直接析构了）。</p>
-<h2 tabindex="-1"><span id="2-信号槽">2. 信号槽</span></h2>
+<h2><span id="2-信号槽">2. 信号槽</span></h2>
 <p>所谓信号槽，实际就是观察者模式。当某个事件发生之后，比如，按钮检测到自己被点击了一下，它就会发出一个信号（signal）。这种发出是没有目的的，类似广播。如果有对象对这个信号感兴趣，它就会使用连接（connect）函数，意思是，用自己的一个函数（成为槽（slot））来处理这个信号。也就是说，当信号发出时，被连接的槽函数会自动被回调。这就类似观察者模式：当发生了感兴趣的事件，某一个操作就会被自动触发。</p>
 <pre class="line-numbers language-none"><code class="language-none">#include &lt;QApplication&gt;
 #include &lt;QPushButton&gt;
@@ -583,7 +583,7 @@ int main(int argc, char *argv[])
     return app.exec();
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>注意这里的 Lambda 表达式接收一个 bool 参数，这是因为<code>QPushButton</code>的<code>clicked()</code>信号实际上是有一个参数的。Lambda 表达式中的<code>qDebug()</code>类似于<code>cout</code>，将后面的字符串打印到标准输出。</p>
-<h2 tabindex="-1"><span id="3-添加动作">3. 添加动作</span></h2>
+<h2><span id="3-添加动作">3. 添加动作</span></h2>
 <p>Qt 使用<code>QAction</code>类作为动作。顾名思义，这个类就是代表了窗口的一个“动作”，这个动作可能显示在菜单，作为一个菜单项，当用户点击该菜单项，对用户的点击做出响应；也可能在工具栏，作为一个工具栏按钮，用户点击这个按钮就可以执行相应的操作。有一点值得注意：无论是出现在菜单栏还是工具栏，用户选择之后，所执行的动作应该都是一样的。因此，Qt 并没有专门的菜单项类，只是使用一个<code>QAction</code>类，抽象出公共的动作。当我们把<code>QAction</code>对象添加到菜单，就显示成一个菜单项，添加到工具栏，就显示成一个工具按钮。用户可以通过点击菜单项、点击工具栏按钮、点击快捷键来激活这个动作。</p>
 <p><code>QAction</code>包含了图标、菜单文字、快捷键、状态栏文字、浮动帮助等信息。当把一个<code>QAction</code>对象添加到程序中时，Qt 自己选择使用哪个属性来显示，无需我们关心。同时，Qt 能够保证把<code>QAction</code>对象添加到不同的菜单、工具栏时，显示内容是同步的。也就是说，如果我们在菜单中修改了<code>QAction</code>的图标，那么在工具栏上面这个<code>QAction</code>所对应的按钮的图标也会同步修改。</p>
 <p>示例：</p>
@@ -682,7 +682,7 @@ toolBar-&gt;addAction(openAction);
 QToolBar *toolBar2 &#x3D; addToolBar(tr(&quot;Tool Bar 2&quot;));
 toolBar2-&gt;addAction(openAction);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><img lazyload src="/images/loading.svg" data-src="http://files.devbean.net/images/2012/09/qtoolbar-2.png" alt="在 QMainWindow 中添加两个 QToolBar"></p>
-<h2 tabindex="-1"><span id="4-布局管理">4. 布局管理</span></h2>
+<h2><span id="4-布局管理">4. 布局管理</span></h2>
 <p>看一个例子：</p>
 <pre class="line-numbers language-none"><code class="language-none">int main(int argc, char *argv[])
 &#123;
@@ -729,7 +729,7 @@ toolBar2-&gt;addAction(openAction);<span aria-hidden="true" class="line-numbers-
 <li><code>QFormLayout</code>：按照表格布局，每一行前面是一段文本，文本后面跟随一个组件（通常是输入框），类似 HTML 的 form；</li>
 <li><code>QStackedLayout</code>：层叠的布局，允许我们将几个组件按照 Z 轴方向堆叠，可以形成向导那种一页一页的效果。</li>
 </ul>
-<h2 tabindex="-1"><span id="5-文件对话框">5. 文件对话框</span></h2>
+<h2><span id="5-文件对话框">5. 文件对话框</span></h2>
 <p><code>QMessageBox</code> Qt标准对话框。</p>
 <p>下面讨论另外一个标准对话框：<code>QFileDialog</code>，文件对话框。下面例子将使用<code>QFileDialog</code>打开一个文本文件，并将修改过的文件保存到硬盘。</p>
 <p>首先创建一个带有文本编辑功能的窗口：</p>
@@ -809,7 +809,7 @@ void MainWindow::saveFile()
 <p><code>QFileDialog::getOpenFileName()</code>返回值是选择的文件路径。我们将其赋值给 path。通过判断 path 是否为空，可以确定用户是否选择了某一文件。只有当用户选择了一个文件时，我们才执行下面的操作。</p>
 <p>我们创建一个QFile对象，将用户选择的文件路径传递给这个对象。用<code>QFile::open()</code>来打开这个文件，其参数是指定的打开方式，这里我们使用只读方式和文本方式。<code>QFile::open()</code>打开成功返回true, 由此继续下面的操作：使用<code>QTextStream::readAll()</code>读取文件所有内容赋值给<code>QtextEdit</code>显示出来。</p>
 <p><code>saveFile()</code>函数也是类似的，最后一步我们用&lt;&lt;重定向，将QTextEdit的内容输出到一个文件中。文件操作我们后续介绍。</p>
-<h2 tabindex="-1"><span id="6-事件">6. 事件</span></h2>
+<h2><span id="6-事件">6. 事件</span></h2>
 <p>事件（event）是由系统或者 Qt 本身在不同的时刻发出的。当用户按下鼠标、敲下键盘，或者是窗口需要重新绘制的时候，都会发出一个相应的事件。一些事件在对用户操作做出响应时发出，如键盘事件等；另一些事件则是由系统自动发出，如计时器事件。</p>
 <p>Qt 中的事件和信号槽却并不是可以相互替代的。信号由具体的对象发出，然后会马上交给由<code>connect()</code>函数连接的槽进行处理；而对于事件，Qt 使用一个事件队列对所有发出的事件进行维护，当新的事件产生时，会被追加到事件队列的尾部。前一个事件完成后，取出后面的事件进行处理。但是，必要的时候，Qt 的事件也可以不进入事件队列，而是直接处理。信号一旦发出，对应的槽函数一定会被执行。但是，事件则可以使用“事件过滤器”进行过滤，对于有些事件进行额外的处理，另外的事件则不关心。总的来说，如果我们<strong>使用</strong>组件，我们关心的是信号槽；如果我们<strong>自定义</strong>组件，我们关心的是事件。因为我们可以通过事件来改变组件的默认操作。比如，如果我们要自定义一个能够响应鼠标事件的<code>EventLabel</code>，我们就需要重写<code>QLabel</code>的鼠标事件，做出我们希望的操作，有可能还得在恰当的时候发出一个类似按钮的<code>clicked()</code>信号（如果我们希望让这个<code>EventLabel</code>能够被其它组件使用）或者其它的信号。</p>
 <p>下面看一个例子：</p>
@@ -857,7 +857,7 @@ int main(int argc, char *argv[])
 <pre class="line-numbers language-none"><code class="language-none">QString(&quot;[%1, %2]&quot;).arg(x, y);<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>语句将会使用 x 替换 %1，y 替换 %2，因此，这个语句生成的<code>QString</code>为 [x, y]。</p>
 <p>在<code>mouseReleaseEvent()</code>函数中，我们使用了另外一种<code>QString</code>的构造方法。我们使用类似 C 风格的格式化函数<code>sprintf()</code>来构造<code>QString</code>。</p>
-<h2 tabindex="-1"><span id="7-绘制">7. 绘制</span></h2>
+<h2><span id="7-绘制">7. 绘制</span></h2>
 <p>Qt 的绘图系统允许使用相同的 API 在屏幕和其它打印设备上进行绘制。整个绘图系统基于<code>QPainter</code>，<code>QPainterDevice</code>和<code>QPaintEngine</code>三个类。</p>
 <p><code>QPainter</code>用来执行绘制的操作；<code>QPaintDevice</code>是一个二维空间的抽象，这个二维空间允许<code>QPainter</code>在其上面进行绘制，也就是<code>QPainter</code>工作的空间；<code>QPaintEngine</code>提供了画笔（<code>QPainter</code>）在不同的设备上进行绘制的统一的接口。<code>QPaintEngine</code>类应用于<code>QPainter</code>和<code>QPaintDevice</code>之间，通常对开发人员是透明的。除非你需要自定义一个设备，否则你是不需要关心<code>QPaintEngine</code>这个类的。我们可以把<code>QPainter</code>理解成画笔；把<code>QPaintDevice</code>理解成使用画笔的地方，比如纸张、屏幕等；而对于纸张、屏幕而言，肯定要使用不同的画笔绘制，为了统一使用一种画笔，我们设计了<code>QPaintEngine</code>类，这个类让不同的纸张、屏幕都能使用一种画笔。</p>
 <p>下面我们通过一个实例来介绍<code>QPainter</code>的使用：</p>
@@ -920,8 +920,6 @@ void PaintedWidget::paintEvent(QPaintEvent *)
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>Qt 提供了四种坐标变换：平移 translate，旋转 rotate，缩放 scale 和扭曲 shear。在这段代码中，我们首先在 (10, 10) 点绘制一个红色的 50x100 矩形。保存当前状态，将坐标系平移到 (100, 0)，绘制一个黄色的矩形。注意，<code>translate()</code>操作平移的是坐标系，不是矩形。因此，我们还是在 (10, 10) 点绘制一个 50x100 矩形，现在，它跑到了右侧的位置。然后恢复先前状态，也就是把坐标系重新设为默认坐标系（相当于进行<code>translate(-100, 0)</code>），再进行下面的操作。之后也是类似的。由于我们只是保存了默认坐标系的状态，因此我们之后的<code>translate()</code>横坐标值必须增加，否则就会覆盖掉前面的图形。所有这些操作都是针对坐标系的，因此在绘制时，我们提供的矩形的坐标参数都是不变的。</p>
 <p><img lazyload src="/images/loading.svg" data-src="http://files.devbean.net/images/2012/11/coordinate-transformations-demo.png" alt="坐标变换示例"></p>
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
 
         </div>
 
@@ -1095,7 +1093,7 @@ void PaintedWidget::paintEvent(QPaintEvent *)
                     </span>
                     
                         <span>
-                            共 109.9k 字
+                            共 109.8k 字
                         </span>
                     
                 </p>
