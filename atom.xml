@@ -28,7 +28,8 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;research-paper-notes&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#research-paper-notes&quot;&gt;&lt;/a&gt;</summary>
+    <summary type="html">&lt;h1 id=&quot;research-paper-notes&quot; tabindex=&quot;-1&quot;&gt;Research-paper-notes&lt;/h1&gt;
+&lt;p&gt;zwm的论文阅读笔记，聚焦于recommender systems, educational data mining,</summary>
         
       
     
@@ -51,7 +52,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;大三下总结与夏令营回忆&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#大三下总结与夏令营回忆&quot;&gt;&lt;/a&gt;</summary>
+    <summary type="html">&lt;h1 id=&quot;大三下总结与夏令营回忆&quot;</summary>
         
       
     
@@ -74,8 +75,8 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;大三上学期总结与思考&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#大三上学期总结与思考&quot;&gt;&lt;/a&gt; 大三上学期总结与思考&lt;/h1&gt;
-&lt;h2 id=&quot;快乐&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;大三上学期总结与思考&quot; tabindex=&quot;-1&quot;&gt;大三上学期总结与思考&lt;/h1&gt;
+&lt;h2 id=&quot;快乐&quot;</summary>
         
       
     
@@ -98,7 +99,9 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;computer-graphics-icu&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#computer-graphics-icu&quot;&gt;&lt;/a&gt; Computer Graphics</summary>
+    <summary type="html">&lt;h1 id=&quot;computer-graphics-icu&quot; tabindex=&quot;-1&quot;&gt;Computer Graphics ICU&lt;/h1&gt;
+&lt;p&gt;计算机图形学期末笔记整理&lt;/p&gt;
+&lt;h2 id=&quot;lecture_1_pipeline&quot;</summary>
         
       
     
@@ -121,8 +124,8 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;大二下总结与思考&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#大二下总结与思考&quot;&gt;&lt;/a&gt; 大二下总结与思考&lt;/h1&gt;
-&lt;h2 id=&quot;炼狱&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#炼狱&quot;&gt;&lt;/a&gt;</summary>
+    <summary type="html">&lt;h1 id=&quot;大二下总结与思考&quot; tabindex=&quot;-1&quot;&gt;大二下总结与思考&lt;/h1&gt;
+&lt;h2 id=&quot;炼狱&quot;</summary>
         
       
     
@@ -145,7 +148,9 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;新机开荒指北&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#新机开荒指北&quot;&gt;&lt;/a&gt;</summary>
+    <summary type="html">&lt;h1 id=&quot;新机开荒指北&quot; tabindex=&quot;-1&quot;&gt;新机开荒指北&lt;/h1&gt;
+&lt;p&gt;2022年入了新机子，联想y9000x，机子很好，配置很烦，遂记录自己新机子的开荒过程。主要是一些环境和软件的配置，之前在老机子上走了很多弯路，现在要重走一遍。&lt;/p&gt;
+&lt;h2</summary>
         
       
     
@@ -191,8 +196,8 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;大二上的总结与思考&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#大二上的总结与思考&quot;&gt;&lt;/a&gt; 大二上的总结与思考&lt;/h1&gt;
-&lt;h2 id=&quot;过渡&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;大二上的总结与思考&quot; tabindex=&quot;-1&quot;&gt;大二上的总结与思考&lt;/h1&gt;
+&lt;h2 id=&quot;过渡&quot;</summary>
         
       
     
@@ -215,7 +220,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;data-analysis-and-visualization-of-poi-checking-in-data&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;data-analysis-and-visualization-of-poi-checking-in-data&quot; tabindex=&quot;-1&quot;&gt;Data Analysis and Visualization of POI Checking-In</summary>
         
       
     
@@ -238,7 +243,11 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;qt-gui-programming-notes&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#qt-gui-programming-notes&quot;&gt;&lt;/a&gt; Qt GUI Programming</summary>
+    <summary type="html">&lt;h1 id=&quot;qt-gui-programming-notes&quot; tabindex=&quot;-1&quot;&gt;Qt GUI Programming Notes&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Yevzwming  Dec.1 2021&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2</summary>
         
       
     
@@ -261,8 +270,8 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;大一下总结与思考&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#大一下总结与思考&quot;&gt;&lt;/a&gt; 大一下总结与思考&lt;/h1&gt;
-&lt;h2 id=&quot;痛感&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#痛感&quot;&gt;&lt;/a&gt;</summary>
+    <summary type="html">&lt;h1 id=&quot;大一下总结与思考&quot; tabindex=&quot;-1&quot;&gt;大一下总结与思考&lt;/h1&gt;
+&lt;h2 id=&quot;痛感&quot;</summary>
         
       
     
@@ -285,7 +294,8 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;2020-2021-advanced-english-lexicon&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#2020-2021-advanced-english-lexicon&quot;&gt;&lt;/a&gt; 2020-2021 advanced</summary>
+    <summary type="html">&lt;h1 id=&quot;2020-2021-advanced-english-lexicon&quot; tabindex=&quot;-1&quot;&gt;2020-2021 advanced English lexicon&lt;/h1&gt;
+&lt;h2 id=&quot;106-lexicon-210223&quot;</summary>
         
       
     
@@ -308,7 +318,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;20江苏高考数学拾忆&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#20江苏高考数学拾忆&quot;&gt;&lt;/a&gt;</summary>
+    <summary type="html">&lt;h1 id=&quot;20江苏高考数学拾忆&quot;</summary>
         
       
     
@@ -331,8 +341,8 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;大一上学期总结与思考&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#大一上学期总结与思考&quot;&gt;&lt;/a&gt; 大一上学期总结与思考&lt;/h1&gt;
-&lt;h2 id=&quot;落差&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;大一上学期总结与思考&quot; tabindex=&quot;-1&quot;&gt;大一上学期总结与思考&lt;/h1&gt;
+&lt;h2 id=&quot;落差&quot;</summary>
         
       
     
@@ -355,8 +365,8 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;甘雨园拾花&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#甘雨园拾花&quot;&gt;&lt;/a&gt; 甘雨园拾花&lt;/h1&gt;
-&lt;h2 id=&quot;1-从赞化宫到甘雨园&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;甘雨园拾花&quot; tabindex=&quot;-1&quot;&gt;甘雨园拾花&lt;/h1&gt;
+&lt;h2 id=&quot;1-从赞化宫到甘雨园&quot; tabindex=&quot;-1&quot;&gt;1.</summary>
         
       
     
@@ -379,8 +389,8 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;干货我的高中学习发家史&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#干货我的高中学习发家史&quot;&gt;&lt;/a&gt; 干货！我的高中学习发家史&lt;/h1&gt;
-&lt;h2 id=&quot;语文可怜的发家史从110-130&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;h1 id=&quot;干货我的高中学习发家史&quot; tabindex=&quot;-1&quot;&gt;干货！我的高中学习发家史&lt;/h1&gt;
+&lt;h2 id=&quot;语文可怜的发家史从110-130&quot;</summary>
         
       
     
@@ -403,8 +413,8 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;我们抬起头仰望太阳&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#我们抬起头仰望太阳&quot;&gt;&lt;/a&gt; 我们抬起头仰望太阳&lt;/h1&gt;
-&lt;h2 id=&quot;前言&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;我们抬起头仰望太阳&quot; tabindex=&quot;-1&quot;&gt;我们抬起头仰望太阳&lt;/h1&gt;
+&lt;h2 id=&quot;前言&quot;</summary>
         
       
     
