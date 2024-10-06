@@ -906,7 +906,7 @@ button {
   clear: both;
 }
 .markdown-body {
-  font-family: 'Geist Variable', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', 'Heiti SC', 'WenQuanYi Micro Hei', sans-serif, sans-serif;
+  font-family: 'Farsan&display=swap# Font family', 'Noto+Sans+SC:wght@400;500;700&display=swap', sans-serif;
   font-size: 16px;
 }
 .markdown-body blockquote {
@@ -1016,7 +1016,7 @@ button {
 .markdown-body .h4,
 .markdown-body .h5,
 .markdown-body .h6 {
-  font-family: 'Geist Variable', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', 'Heiti SC', 'WenQuanYi Micro Hei', sans-serif, sans-serif;
+  font-family: 'Farsan&display=swap# Font family', 'Noto+Sans+SC:wght@400;500;700&display=swap', sans-serif;
   color: var(--second-text-color);
   line-height: 1.5;
 }
@@ -1496,24 +1496,24 @@ button {
   :root {
     --inline-code-foreground: #c9d1d9;
     --inline-code-background: #313131;
-    --highlight-background: #1e1e1e;
-    --highlight-foreground: #dcdcdc;
-    --highlight-keyword: #569cd6;
-    --highlight-link: #569cd6;
-    --highlight-built-in: #4ec9b0;
-    --highlight-number: #b8d7a3;
-    --highlight-string: #d69d85;
-    --highlight-regexp: #9a5334;
-    --highlight-subst: #dcdcdc;
-    --highlight-comment: #57a64a;
-    --highlight-doctag: #608b4e;
-    --highlight-meta: #9b9b9b;
-    --highlight-variable: #bd63c5;
-    --highlight-attr: #9cdcfe;
-    --highlight-section: #ffd700;
-    --highlight-bullet: #d7ba7d;
-    --highlight-addition: #144212;
-    --highlight-deletion: #600;
+    --highlight-background: #0d1117;
+    --highlight-foreground: #c9d1d9;
+    --highlight-keyword: #ff7b72;
+    --highlight-link: #ff7b72;
+    --highlight-built-in: #ffa657;
+    --highlight-number: #79c0ff;
+    --highlight-string: #a5d6ff;
+    --highlight-regexp: #a5d6ff;
+    --highlight-subst: #c9d1d9;
+    --highlight-comment: #8b949e;
+    --highlight-doctag: #ff7b72;
+    --highlight-meta: #79c0ff;
+    --highlight-variable: #79c0ff;
+    --highlight-attr: #79c0ff;
+    --highlight-section: #1f6feb;
+    --highlight-bullet: #f2cc60;
+    --highlight-addition: #aff5b4;
+    --highlight-deletion: #ffdcd7;
   }
 }
 .light-mode {
@@ -1541,24 +1541,24 @@ button {
 .dark-mode {
   --inline-code-foreground: #c9d1d9;
   --inline-code-background: #313131;
-  --highlight-background: #1e1e1e;
-  --highlight-foreground: #dcdcdc;
-  --highlight-keyword: #569cd6;
-  --highlight-link: #569cd6;
-  --highlight-built-in: #4ec9b0;
-  --highlight-number: #b8d7a3;
-  --highlight-string: #d69d85;
-  --highlight-regexp: #9a5334;
-  --highlight-subst: #dcdcdc;
-  --highlight-comment: #57a64a;
-  --highlight-doctag: #608b4e;
-  --highlight-meta: #9b9b9b;
-  --highlight-variable: #bd63c5;
-  --highlight-attr: #9cdcfe;
-  --highlight-section: #ffd700;
-  --highlight-bullet: #d7ba7d;
-  --highlight-addition: #144212;
-  --highlight-deletion: #600;
+  --highlight-background: #0d1117;
+  --highlight-foreground: #c9d1d9;
+  --highlight-keyword: #ff7b72;
+  --highlight-link: #ff7b72;
+  --highlight-built-in: #ffa657;
+  --highlight-number: #79c0ff;
+  --highlight-string: #a5d6ff;
+  --highlight-regexp: #a5d6ff;
+  --highlight-subst: #c9d1d9;
+  --highlight-comment: #8b949e;
+  --highlight-doctag: #ff7b72;
+  --highlight-meta: #79c0ff;
+  --highlight-variable: #79c0ff;
+  --highlight-attr: #79c0ff;
+  --highlight-section: #1f6feb;
+  --highlight-bullet: #f2cc60;
+  --highlight-addition: #aff5b4;
+  --highlight-deletion: #ffdcd7;
 }
 pre,
 .highlight {
@@ -1574,7 +1574,7 @@ pre,
 pre,
 code {
   line-height: 1.5 !important;
-  font-family: 'Geist Mono', Courier, monospace !important;
+  font-family: 'Source+Code+Pro:wght@400;500;600;700&display=swap# Font family', 'Geist Mono', Courier, monospace !important;
 }
 pre.mermaid {
   background-color: var(--background-color);
@@ -2171,24 +2171,24 @@ pre .deletion {
   :root {
     --inline-code-foreground: #c9d1d9;
     --inline-code-background: #313131;
-    --highlight-background: #1e1e1e;
-    --highlight-foreground: #dcdcdc;
-    --highlight-keyword: #569cd6;
-    --highlight-link: #569cd6;
-    --highlight-built-in: #4ec9b0;
-    --highlight-number: #b8d7a3;
-    --highlight-string: #d69d85;
-    --highlight-regexp: #9a5334;
-    --highlight-subst: #dcdcdc;
-    --highlight-comment: #57a64a;
-    --highlight-doctag: #608b4e;
-    --highlight-meta: #9b9b9b;
-    --highlight-variable: #bd63c5;
-    --highlight-attr: #9cdcfe;
-    --highlight-section: #ffd700;
-    --highlight-bullet: #d7ba7d;
-    --highlight-addition: #144212;
-    --highlight-deletion: #600;
+    --highlight-background: #0d1117;
+    --highlight-foreground: #c9d1d9;
+    --highlight-keyword: #ff7b72;
+    --highlight-link: #ff7b72;
+    --highlight-built-in: #ffa657;
+    --highlight-number: #79c0ff;
+    --highlight-string: #a5d6ff;
+    --highlight-regexp: #a5d6ff;
+    --highlight-subst: #c9d1d9;
+    --highlight-comment: #8b949e;
+    --highlight-doctag: #ff7b72;
+    --highlight-meta: #79c0ff;
+    --highlight-variable: #79c0ff;
+    --highlight-attr: #79c0ff;
+    --highlight-section: #1f6feb;
+    --highlight-bullet: #f2cc60;
+    --highlight-addition: #aff5b4;
+    --highlight-deletion: #ffdcd7;
   }
 }
 .light-mode {
@@ -2216,24 +2216,24 @@ pre .deletion {
 .dark-mode {
   --inline-code-foreground: #c9d1d9;
   --inline-code-background: #313131;
-  --highlight-background: #1e1e1e;
-  --highlight-foreground: #dcdcdc;
-  --highlight-keyword: #569cd6;
-  --highlight-link: #569cd6;
-  --highlight-built-in: #4ec9b0;
-  --highlight-number: #b8d7a3;
-  --highlight-string: #d69d85;
-  --highlight-regexp: #9a5334;
-  --highlight-subst: #dcdcdc;
-  --highlight-comment: #57a64a;
-  --highlight-doctag: #608b4e;
-  --highlight-meta: #9b9b9b;
-  --highlight-variable: #bd63c5;
-  --highlight-attr: #9cdcfe;
-  --highlight-section: #ffd700;
-  --highlight-bullet: #d7ba7d;
-  --highlight-addition: #144212;
-  --highlight-deletion: #600;
+  --highlight-background: #0d1117;
+  --highlight-foreground: #c9d1d9;
+  --highlight-keyword: #ff7b72;
+  --highlight-link: #ff7b72;
+  --highlight-built-in: #ffa657;
+  --highlight-number: #79c0ff;
+  --highlight-string: #a5d6ff;
+  --highlight-regexp: #a5d6ff;
+  --highlight-subst: #c9d1d9;
+  --highlight-comment: #8b949e;
+  --highlight-doctag: #ff7b72;
+  --highlight-meta: #79c0ff;
+  --highlight-variable: #79c0ff;
+  --highlight-attr: #79c0ff;
+  --highlight-section: #1f6feb;
+  --highlight-bullet: #f2cc60;
+  --highlight-addition: #aff5b4;
+  --highlight-deletion: #ffdcd7;
 }
 :root {
   --background-color: #fff;
@@ -3052,7 +3052,7 @@ html.is-animating .transition-fade {
   width: 100%;
   font-size: 0.92rem;
   box-sizing: border-box;
-  font-family: 'Geist Variable', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', 'Heiti SC', 'WenQuanYi Micro Hei', sans-serif, 'Noto Sans', 'Noto Sans SC', sans-serif;
+  font-family: 'Farsan&display=swap# Font family', 'Noto+Sans+SC:wght@400;500;700&display=swap', 'Noto Sans', 'Noto Sans SC', sans-serif;
 }
 .post-toc-wrap .post-toc .toc-title {
   font-size: 0.8rem;
@@ -6958,7 +6958,7 @@ html.is-animating .scroll-progress-bar {
   }
 }
 .article-copyright-info-container {
-  font-family: 'Geist Variable', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', 'Heiti SC', 'WenQuanYi Micro Hei', sans-serif;
+  font-family: 'Farsan&display=swap# Font family', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', 'Heiti SC', 'WenQuanYi Micro Hei', sans-serif;
   position: relative;
   width: 100%;
   box-sizing: border-box;
@@ -7302,7 +7302,7 @@ html.is-animating .scroll-progress-bar {
   font-size: 1.4rem;
   line-height: 1.5;
   color: var(--second-text-color);
-  font-family: 'Geist Variable', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', 'Heiti SC', 'WenQuanYi Micro Hei', sans-serif, 'Noto Sans SC', sans-serif;
+  font-family: 'Farsan&display=swap# Font family', 'Noto+Sans+SC:wght@400;500;700&display=swap', 'Noto Sans SC', sans-serif;
   margin: 0;
 }
 @media (max-width: 768px) {
