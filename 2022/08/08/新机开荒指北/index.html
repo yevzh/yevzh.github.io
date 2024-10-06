@@ -523,9 +523,9 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <h1 id="新机开荒指北">新机开荒指北</h1>
+            <h1 id="新机开荒指北"><a class="markdownIt-Anchor" href="#新机开荒指北"></a> 新机开荒指北</h1>
 <p>2022年入了新机子，联想y9000x，机子很好，配置很烦，遂记录自己新机子的开荒过程。主要是一些环境和软件的配置，之前在老机子上走了很多弯路，现在要重走一遍。</p>
-<h2 id="vscode">Vscode</h2>
+<h2 id="vscode"><a class="markdownIt-Anchor" href="#vscode"></a> Vscode</h2>
 <p>首先我们先下载安装<a class="link" target="_blank" rel="noopener" href="https://bit.ly/mingw10">MinGW编译器 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>。</p>
 <p>如图所示下载：</p>
 <p><img lazyload src="/images/loading.svg" data-src="1.png" alt></p>
@@ -535,7 +535,7 @@
 <p>官网下载Vscode，然后按照要求安装。我准备把这些东西都配置在D盘的Env文件夹内。</p>
 <p>然后打开Vscode，我们需要安装相应的扩展，来实现我们基础的功能（写C或者C++）:在这里我们需要的扩展是**CodeRunner和C/C++**扩展，点击下载即可。如图所示。</p>
 <p><img lazyload src="/images/loading.svg" data-src="3.png" alt></p>
-<h2 id="pycharm">Pycharm</h2>
+<h2 id="pycharm"><a class="markdownIt-Anchor" href="#pycharm"></a> Pycharm</h2>
 <p>首先在官网下载Anaconda和Pycharm Community版。同Vscode，我也是安装在了D盘的Env文件夹。</p>
 <p>装好了我们需要重启电脑，然后开始搞Pycharm.</p>
 <p>让我们新建项目，此时会让我们选Interpreter，我们选择Previously那一个，因为我们的Conda已经有这方面的配置了。</p>
@@ -544,7 +544,7 @@
 <p><img lazyload src="/images/loading.svg" data-src="5.png" alt></p>
 <p>测试了一下，能跑！于是我们pycharm也配置好了。</p>
 <p><img lazyload src="/images/loading.svg" data-src="6.png" alt></p>
-<h2 id="qt">QT</h2>
+<h2 id="qt"><a class="markdownIt-Anchor" href="#qt"></a> QT</h2>
 <p>QT是我大二上学期问题求解与实践这门课的课程大作业，用QT来设计一个数据分析系统，做了我快一个月的时间。虽然我现在可能不怎么用到了，但是我还是决定把它配置起来，一方面自己偶尔可能会打开，另一方面下一届有问题了或许可以参考参考。</p>
 <p>首先QT我们不要在官网上面找下载，好像都是online安装版本的，而我们需要的好像是开源开发版本。</p>
 <p>没有关系，我把下载链接搞到了，在某个<a class="link" target="_blank" rel="noopener" href="https://download.qt.io/archive/qt/">青青草原网站 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
@@ -554,14 +554,14 @@
 <p><img lazyload src="/images/loading.svg" data-src="7.png" alt></p>
 <p>然后就顺着安装啦。安装完我们试着运行一下我的大作业，发现非常丝滑。</p>
 <p><img lazyload src="/images/loading.svg" data-src="8.png" alt></p>
-<h2 id="typora">Typora</h2>
+<h2 id="typora"><a class="markdownIt-Anchor" href="#typora"></a> Typora</h2>
 <p>想了想还是没舍得花90块钱买正版软件（看看身边的同学都是用的各种小操作来直接用的）</p>
 <p>于是我上万能的github一搜，果就找到所谓破解的办法，于是便暂时用在自己的电脑上试试，这篇文档就是我用这个码出来的。</p>
 <p><a class="link" target="_blank" rel="noopener" href="https://github.com/zhizhuoshuma/Typora1.3.6">链接奉上 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <p><strong>记住一定要记得在设置里取消勾选自动更新！</strong></p>
-<h2 id="gitamphexo-blog">Git&amp;Hexo blog</h2>
+<h2 id="gitamphexo-blog"><a class="markdownIt-Anchor" href="#githexo-blog"></a> Git&amp;Hexo blog</h2>
 <p>我一直以为这是最复杂的一步，因为去年此时我配置hexo blog的时候配置了很长很长时间才配置成功，不过猜想如果是仅仅搬迁会稍稍简单一点点？话不多说，开始实践。</p>
-<h3 id="git的下载">git的下载</h3>
+<h3 id="git的下载"><a class="markdownIt-Anchor" href="#git的下载"></a> git的下载</h3>
 <p>首先我们要下载Git，同上，直接在<a class="link" target="_blank" rel="noopener" href="https://git-scm.com/downloads">官网下载 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <p>安装配置，好像要勾很多东西，我直接全部按照默认去勾选了。</p>
 <p>打开Git Bash，我们需要进行一步初始的设置。</p>
@@ -570,7 +570,7 @@ git config --global user.email &quot;你的邮箱&quot;<span aria-hidden="true" 
 <p>这是给本地设置一个用户名字，然后方便上传的时候显示。</p>
 <p>我们还需要把git添加到环境变量中，否则后期用hexo的时候会报错。</p>
 <p>找到你git的安装目录，把bin的地址加入到<strong>系统环境变量</strong>path中即可。</p>
-<h3 id="ssh的配置">SSH的配置</h3>
+<h3 id="ssh的配置"><a class="markdownIt-Anchor" href="#ssh的配置"></a> SSH的配置</h3>
 <p>第二步我们需要配置SSH，来实现与github的连接。</p>
 <p>首先我们在电脑上检查是否有SSH，我们直接在Bash中输入以下代码：</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">~&#x2F;.ssh<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -581,7 +581,7 @@ git config --global user.email &quot;你的邮箱&quot;<span aria-hidden="true" 
 <p>现在我们要把它连接到自己的github，我们需要打开github的设置界面，打开<strong>SSH and GPG Keys</strong>一栏，点击<strong>New SSH key</strong>.</p>
 <p>此时我们要找到刚刚自己配置的ssh，它位于自己的用户目录内的.ssh文件夹，里面有个id.rsa文件，复制粘贴到github上即可。</p>
 <p>这时候你会收到一封邮件，代表你搞定了。</p>
-<h3 id="nodejs配置">Node.js配置</h3>
+<h3 id="nodejs配置"><a class="markdownIt-Anchor" href="#nodejs配置"></a> Node.js配置</h3>
 <p>同样，我们在<a class="link" target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/">官网 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>下载好安装好这些前期的东西。</p>
 <p>我们可以通过cmd来查看是否安装成功了：</p>
 <p><img lazyload src="/images/loading.svg" data-src="10.png" alt></p>
@@ -598,7 +598,7 @@ git config --global user.email &quot;你的邮箱&quot;<span aria-hidden="true" 
 <p>这时候我们用npm装上hexo，命令如下：</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">npm install hexo-cli -g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>这时候我们把原来的hexoblog文件夹可以搬运过来了，搬过来之后可以npm install一下，就大功告成了。</p>
-<h2 id="wsl2配置">WSL2配置</h2>
+<h2 id="wsl2配置"><a class="markdownIt-Anchor" href="#wsl2配置"></a> WSL2配置</h2>
 <p>如果不想体验虚拟机的麻烦，很多轻量级的工作是可以直接在windows系统上装一个小Linux来完成的，便捷而轻巧。受泓桥哥的启发于是决定在电脑上装WSL2，一个windows上的ubuntu子系统。</p>
 <p>首先我们在windows的powershell中通过命令行来使得支持WSL2，输入以下几条命令。</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">wsl --install
@@ -616,7 +616,7 @@ Expand-Archive .\Ubuntu.zip -Verbose<span aria-hidden="true" class="line-numbers
 <p>当然我在最后一步设置Ubuntu的时候也给我报了错：<strong>WslRegisterDistribution failed with error: 0x800701bc</strong></p>
 <p>于是上网搜了搜，是因为wsl1到wsl2安装包没有升级，我们需要下载一个wsl的安装包（<a class="link" target="_blank" rel="noopener" href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi">下载地址 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>），安装即可。</p>
 <p>于是WSL2便基本成功啦，妈妈再也不用担心我不会用虚拟机(bushi)。</p>
-<h2 id="github连接本地">Github连接本地</h2>
+<h2 id="github连接本地"><a class="markdownIt-Anchor" href="#github连接本地"></a> Github连接本地</h2>
 <p>之前学习github的时候踩了很多坑，甚至连怎么上传代码都不会，只会妥妥拽拽地上传，暑假才会通过git来搞事情，在这里顺便也记录下如何实现github的本地连接的，也算是半个配置或者git的应用吧。</p>
 <p>在这里我们先打开一个我们自己的仓库，在页面我们可以看到该仓库的ssh链接，我们复制下来。</p>
 <p><img lazyload src="/images/loading.svg" data-src="14.png" alt></p>
@@ -766,7 +766,7 @@ Expand-Archive .\Ubuntu.zip -Verbose<span aria-hidden="true" class="line-numbers
     <div class="post-toc">
         <div class="toc-title">目录</div>
         <div class="page-title">新机开荒指北</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%B0%E6%9C%BA%E5%BC%80%E8%8D%92%E6%8C%87%E5%8C%97"><span class="nav-text">新机开荒指北</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#vscode"><span class="nav-text">Vscode</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pycharm"><span class="nav-text">Pycharm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#qt"><span class="nav-text">QT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#typora"><span class="nav-text">Typora</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gitamphexo-blog"><span class="nav-text">Git&amp;Hexo blog</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#git%E7%9A%84%E4%B8%8B%E8%BD%BD"><span class="nav-text">git的下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ssh%E7%9A%84%E9%85%8D%E7%BD%AE"><span class="nav-text">SSH的配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nodejs%E9%85%8D%E7%BD%AE"><span class="nav-text">Node.js配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wsl2%E9%85%8D%E7%BD%AE"><span class="nav-text">WSL2配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#github%E8%BF%9E%E6%8E%A5%E6%9C%AC%E5%9C%B0"><span class="nav-text">Github连接本地</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%B0%E6%9C%BA%E5%BC%80%E8%8D%92%E6%8C%87%E5%8C%97"><span class="nav-text"> 新机开荒指北</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#vscode"><span class="nav-text"> Vscode</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pycharm"><span class="nav-text"> Pycharm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#qt"><span class="nav-text"> QT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#typora"><span class="nav-text"> Typora</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gitamphexo-blog"><span class="nav-text"> Git&amp;Hexo blog</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#git%E7%9A%84%E4%B8%8B%E8%BD%BD"><span class="nav-text"> git的下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ssh%E7%9A%84%E9%85%8D%E7%BD%AE"><span class="nav-text"> SSH的配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nodejs%E9%85%8D%E7%BD%AE"><span class="nav-text"> Node.js配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wsl2%E9%85%8D%E7%BD%AE"><span class="nav-text"> WSL2配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#github%E8%BF%9E%E6%8E%A5%E6%9C%AC%E5%9C%B0"><span class="nav-text"> Github连接本地</span></a></li></ol></li></ol>
 
     </div>
 </div>
@@ -788,44 +788,60 @@ Expand-Archive .\Ubuntu.zip -Verbose<span aria-hidden="true" class="line-numbers
             <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
     <div class="info-container py-3 text-center">
         
-        <div class="text-center">
-            &copy;
+        <!-- 使用 flex 布局分为三列：左侧、中央、右侧 -->
+        <div class="footer-content" style="display: flex; justify-content: space-between; align-items: center;">
             
-              <span>2022</span>
-              -
-            
-            2024&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">Yevzh</a>
-            
+            <!-- 左侧：footer 文本部分 -->
+            <div class="footer-text">
+                &copy;
                 
-                <p class="post-count space-x-0.5">
-                    <span>
-                        共撰写了 17 篇文章
-                    </span>
+                  <span>2022</span>
+                  -
+                
+                2024&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">Yevzh</a>
+                
                     
+                    <p class="post-count space-x-0.5">
                         <span>
-                            共 109.8k 字
+                            共撰写了 17 篇文章
                         </span>
-                    
-                </p>
-            
-        </div>
-        
-            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
-            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
-                
-                    <span id="busuanzi_container_site_uv" class="lg:!block">
-                        <span class="text-sm">访问人数</span>
-                        <span id="busuanzi_value_site_uv"></span>
-                    </span>
-                
-                
-                    <span id="busuanzi_container_site_pv" class="lg:!block">
-                        <span class="text-sm">总访问量</span>
-                        <span id="busuanzi_value_site_pv"></span>
-                    </span>
+                        
+                            <span>
+                                共 109.9k 字
+                            </span>
+                        
+                    </p>
                 
             </div>
-        
+
+            <!-- 中间：访问统计部分 -->
+            
+                <div class="website-counter">
+                    <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+                    <div>
+                        
+                            <span id="busuanzi_container_site_uv" class="lg:!block">
+                                <span class="text-sm">访问人数</span>
+                                <span id="busuanzi_value_site_uv"></span>
+                            </span>
+                        
+                        
+                            <span id="busuanzi_container_site_pv" class="lg:!block">
+                                <span class="text-sm">总访问量</span>
+                                <span id="busuanzi_value_site_pv"></span>
+                            </span>
+                        
+                    </div>
+                </div>
+            
+
+            <!-- 右侧：ClustrMaps 小组件 -->
+            <div class="clustrmaps-widget">
+                <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d=Ns1bpfTl1UW31i4-rEk8nm6E9wcxPmZccbpBkOH4OYQ&cmn=ff5353&co=2d78ad&cmo=3acc3a&ct=ffffff'></script>
+            </div>
+        </div>
+
+        <!-- 保留 Hexo 版权及主题信息 -->
         <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
             <span class="lg:block text-sm">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 驱动</span>
             <span class="text-sm lg:block">主题&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.7.1</a></span>
@@ -836,27 +852,9 @@ Expand-Archive .\Ubuntu.zip -Verbose<span aria-hidden="true" class="line-numbers
                 博客已运行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小时 <span class="odometer" id="runtime_minutes"></span> 分钟 <span class="odometer" id="runtime_seconds"></span> 秒
             </div>
         
-        
-            <script data-swup-reload-script>
-                try {
-                    function odometer_init() {
-                    const elements = document.querySelectorAll('.odometer');
-                    elements.forEach(el => {
-                        new Odometer({
-                            el,
-                            format: '( ddd).dd',
-                            duration: 200
-                        });
-                    });
-                    }
-                    odometer_init();
-                } catch (error) {}
-            </script>
-        
-        
-        
     </div>  
 </footer>
+
         </div>
     </div>
 

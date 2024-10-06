@@ -464,44 +464,60 @@
             <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
     <div class="info-container py-3 text-center">
         
-        <div class="text-center">
-            &copy;
+        <!-- 使用 flex 布局分为三列：左侧、中央、右侧 -->
+        <div class="footer-content" style="display: flex; justify-content: space-between; align-items: center;">
             
-              <span>2022</span>
-              -
-            
-            2024&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">Yevzh</a>
-            
+            <!-- 左侧：footer 文本部分 -->
+            <div class="footer-text">
+                &copy;
                 
-                <p class="post-count space-x-0.5">
-                    <span>
-                        共撰写了 17 篇文章
-                    </span>
+                  <span>2022</span>
+                  -
+                
+                2024&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">Yevzh</a>
+                
                     
+                    <p class="post-count space-x-0.5">
                         <span>
-                            共 109.8k 字
+                            共撰写了 17 篇文章
                         </span>
-                    
-                </p>
-            
-        </div>
-        
-            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
-            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
-                
-                    <span id="busuanzi_container_site_uv" class="lg:!block">
-                        <span class="text-sm">访问人数</span>
-                        <span id="busuanzi_value_site_uv"></span>
-                    </span>
-                
-                
-                    <span id="busuanzi_container_site_pv" class="lg:!block">
-                        <span class="text-sm">总访问量</span>
-                        <span id="busuanzi_value_site_pv"></span>
-                    </span>
+                        
+                            <span>
+                                共 109.9k 字
+                            </span>
+                        
+                    </p>
                 
             </div>
-        
+
+            <!-- 中间：访问统计部分 -->
+            
+                <div class="website-counter">
+                    <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+                    <div>
+                        
+                            <span id="busuanzi_container_site_uv" class="lg:!block">
+                                <span class="text-sm">访问人数</span>
+                                <span id="busuanzi_value_site_uv"></span>
+                            </span>
+                        
+                        
+                            <span id="busuanzi_container_site_pv" class="lg:!block">
+                                <span class="text-sm">总访问量</span>
+                                <span id="busuanzi_value_site_pv"></span>
+                            </span>
+                        
+                    </div>
+                </div>
+            
+
+            <!-- 右侧：ClustrMaps 小组件 -->
+            <div class="clustrmaps-widget">
+                <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d=Ns1bpfTl1UW31i4-rEk8nm6E9wcxPmZccbpBkOH4OYQ&cmn=ff5353&co=2d78ad&cmo=3acc3a&ct=ffffff'></script>
+            </div>
+        </div>
+
+        <!-- 保留 Hexo 版权及主题信息 -->
         <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
             <span class="lg:block text-sm">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 驱动</span>
             <span class="text-sm lg:block">主题&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.7.1</a></span>
@@ -512,27 +528,9 @@
                 博客已运行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小时 <span class="odometer" id="runtime_minutes"></span> 分钟 <span class="odometer" id="runtime_seconds"></span> 秒
             </div>
         
-        
-            <script data-swup-reload-script>
-                try {
-                    function odometer_init() {
-                    const elements = document.querySelectorAll('.odometer');
-                    elements.forEach(el => {
-                        new Odometer({
-                            el,
-                            format: '( ddd).dd',
-                            duration: 200
-                        });
-                    });
-                    }
-                    odometer_init();
-                } catch (error) {}
-            </script>
-        
-        
-        
     </div>  
 </footer>
+
         </div>
     </div>
 
