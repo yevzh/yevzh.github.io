@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+        <meta name="description" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="Yevzh">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://yevzh.github.io/2021/12/01/qt gui programming notes/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/head.jpg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/head.jpg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/head.jpg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            Qt GUI Programming Notes -
+        
+        Yevzh&#39;s Space
+    </title>
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/assets/build/styles.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/GeistMono/geist-mono.css">
+
+    
+<link rel="stylesheet" href="/fonts/Geist/geist.css">
+
+    <!--- Font Part-->
+    
+        <link href="https://fonts.googleapis.com/css2?" rel="stylesheet">
+    
+    
+        <link href="https://fonts.googleapis.com/css2?# Font URL to CSS file" rel="stylesheet">
+    
+    
+        <link href="https://fonts.googleapis.com/css2?" rel="stylesheet">
+    
+    
+        <link href="https://fonts.googleapis.com/css2?# Font URL to CSS file" rel="stylesheet">
+    
+    
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"yevzh.github.io","root":"/","language":"zh-CN","path":"search.xml"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":true,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"github-dark"},"font":{"enable":true,"family":"Source+Code+Pro:wght@400;500;600;700&display=swap# Font family","url":"https://fonts.googleapis.com/css2?# Font URL to CSS file"}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":false,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":true,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":"#1890ff","default_mode":"light"},"global":{"fonts":{"chinese":{"enable":true,"family":"Noto+Sans+SC:wght@400;500;700&display=swap","url":"https://fonts.googleapis.com/css2?"},"english":{"enable":true,"family":"Farsan&display=swap# Font family","url":"https://fonts.googleapis.com/css2?# Font URL to CSS file"},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":false,"custom_message":null},"open_graph":false,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Yevzh's Blog","subtitle":{"text":["Welcome to Yevzh's space!"],"hitokoto":{"enable":true,"show_author":true,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":true,"family":"Noto+Sans+SC:wght@400;500;700&display=swap","url":"https://fonts.googleapis.com/css2?"},"social_links":{"enable":true,"style":"default","links":{"github":"https://github.com/yevzh","instagram":null,"zhihu":"https://www.zhihu.com/people/xiao-mi-44-87-63","twitter":null,"email":"WeimingZhang_2020@sjtu.edu.cn","bilibili":"https://space.bilibili.com/691582981?spm_id_from=333.1007.0.0"},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.7.1","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"About":{"icon":"fa-regular fa-user","submenus":{"Me":"/about","Github":"https://github.com/yevzh","Blog":"https://yevzh.github.io","Friends":"/friends"}},"Links":{"icon":"fa-regular fa-link","submenus":{"Link1":"/link1","Link2":"/link2","Link3":"/link3"}}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":null},"article_date_format":"auto","excerpt_length":150,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2022/8/17 11:45:14"};
+    window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="MING's blog" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+<!--        <span class="swup-progress-icon">-->
+<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+<!--        </span>-->
+    
+</div>
+
+
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container px-6 md:px-12">
+
+    <div class="navbar-content ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Yevzh&#39;s Space
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    首页
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    归档
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-user fa-fw"></i>
+                                    关于
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="/about">
+                                                    ME
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://github.com/yevzh">
+                                                    GITHUB
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="https://yevzh.github.io">
+                                                    BLOG
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/friends">
+                                                    友情链接
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-link fa-fw"></i>
+                                    链接
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="/link1">
+                                                    LINK1
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/link2">
+                                                    LINK2
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/link3">
+                                                    LINK3
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-screen w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                首页
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/archives"
+                        >
+                            <span>
+                                归档
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                             navbar-data-toggle="submenu-About"
+                        >
+                            <span>
+                                关于
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-About">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/about">ME</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://github.com/yevzh">GITHUB</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="https://yevzh.github.io">BLOG</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/friends">友情链接</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                             navbar-data-toggle="submenu-Links"
+                        >
+                            <span>
+                                链接
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-Links">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/link1">LINK1</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/link2">LINK2</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/link3">LINK3</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+
+            
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">4</div>
+        <div class="label text-third-text-color text-sm">标签</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">1</div>
+        <div class="label text-third-text-color text-sm">分类</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">17</div>
+        <div class="label text-third-text-color text-sm">文章</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="post-page-container flex relative justify-between box-border w-full h-full">
+    <div class="article-content-container">
+
+        <div class="article-title relative w-full">
+            
+                <div class="w-full flex items-center pt-6 justify-start">
+                    <h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">Qt GUI Programming Notes</h1>
+                </div>
+            
+            </div>
+
+        
+            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="/images/head.jpg">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">Yevzh</span>
+                        
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv3</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2021-12-01 12:34:36</span>
+        <span class="mobile">2021-12-01 12:34:36</span>
+        <span class="hover-info">创建</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2021-12-02 14:27:48</span>
+            <span class="mobile">2021-12-02 14:27:48</span>
+            <span class="hover-info">更新</span>
+        </span>
+    
+
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/notes/">notes</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>6.3k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>25 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+            <h1><span id="qt-gui-programming-notes">Qt GUI Programming Notes</span></h1><ul>
+<li>Yevzwming  Dec.1 2021</li>
+</ul>
+<h2><span id="1-helloworld">1. hello,world</span></h2><p>创建一个 widget application, 先认识一下这个main函数：</p>
+<p>我们将 main.cpp 修改如下：</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;QApplication&gt;
+#include &lt;QLabel&gt;
+
+int main(int argc, char *argv[])
+&#123;
+    QApplication app(argc, argv);
+
+    QLabel label(&quot;Hello, world&quot;);
+    label.show();
+
+    return app.exec();
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img lazyload src="/images/loading.svg" data-src="http://files.devbean.net/images/2012/08/qt-hello-world.png" alt="Qt HelloWorld 程序运行结果"></p>
+<p>前两行是 C++ 的 include 语句，这里我们引入的是<code>QApplication</code>以及<code>QLabel</code>这两个类。<code>main()</code>函数中第一句是创建一个<code>QApplication</code>类的实例。对于 Qt 程序来说，<code>main()</code>函数一般以创建 application 对象（GUI 程序是<code>QApplication</code>，非 GUI 程序是<code>QCoreApplication</code>。<code>QApplication</code>实际上是<code>QCoreApplication</code>的子类。）开始，后面才是实际业务的代码。这个对象用于管理 Qt 程序的生命周期，开启事件循环，这一切都是必不可少的。在我们创建了<code>QApplication</code>对象之后，直接创建一个<code>QLabel</code>对象，构造函数赋值“Hello, world”，当然就是能够在<code>QLabel</code>上面显示这行文本。最后调用<code>QLabel</code>的<code>show()</code>函数将其显示出来。<code>main()</code>函数最后，调用<code>app.exec()</code>，开启事件循环。我们现在可以简单地将事件循环理解成一段无限循环。正因为如此，我们在栈上构建了<code>QLabel</code>对象，却能够一直显示在那里（试想，如果不是无限循环，<code>main()</code>函数立刻会退出，<code>QLabel</code>对象当然也就直接析构了）。</p>
+<h2><span id="2-信号槽">2. 信号槽</span></h2><p>所谓信号槽，实际就是观察者模式。当某个事件发生之后，比如，按钮检测到自己被点击了一下，它就会发出一个信号（signal）。这种发出是没有目的的，类似广播。如果有对象对这个信号感兴趣，它就会使用连接（connect）函数，意思是，用自己的一个函数（成为槽（slot））来处理这个信号。也就是说，当信号发出时，被连接的槽函数会自动被回调。这就类似观察者模式：当发生了感兴趣的事件，某一个操作就会被自动触发。</p>
+<pre class="line-numbers language-none"><code class="language-none">#include &lt;QApplication&gt;
+#include &lt;QPushButton&gt;
+
+int main(int argc, char *argv[])
+&#123;
+    QApplication app(argc, argv);
+
+    QPushButton button(&quot;Quit&quot;);
+    QObject::connect(&amp;button, &amp;QPushButton::clicked, &amp;QApplication::quit);
+    button.show();
+
+    return app.exec();
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>点击运行，我们会看到一个按钮，上面有“Quit”字样。点击按钮，程序退出。</p>
+<p>我们这里要仔细分析<code>QObject::connect()</code>这个函数。</p>
+<p>我们先来看看<code>connect()</code>函数最常用的一般形式：</p>
+<pre class="line-numbers language-none"><code class="language-none">connect(sender,  signal, receiver, slot);<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><code>connect()</code>一般会使用前面四个参数，第一个是发出信号的对象，第二个是发送对象发出的信号，第三个是接收信号的对象，第四个是接收对象在接收到信号之后所需要调用的函数。也就是说，当 sender 发出了 signal 信号之后，会自动调用 receiver 的 slot 函数。</p>
+<p>当我们的 button 发出了<code>clicked()</code>信号时，会调用<code>QApplication</code>的<code>quit()</code>函数，使程序退出。</p>
+<p>借助 Qt 5 的信号槽语法，我们可以将一个对象的信号连接到 Lambda 表达式，例如：</p>
+<pre class="line-numbers language-none"><code class="language-none">#include &lt;QApplication&gt;
+#include &lt;QPushButton&gt;
+#include &lt;QDebug&gt;
+
+int main(int argc, char *argv[])
+&#123;
+    QApplication app(argc, argv);
+
+    QPushButton button(&quot;Quit&quot;);
+    QObject::connect(&amp;button, &amp;QPushButton::clicked, [](bool) &#123;
+        qDebug() &lt;&lt; &quot;You clicked me!&quot;;
+    &#125;);
+    button.show();
+
+    return app.exec();
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>注意这里的 Lambda 表达式接收一个 bool 参数，这是因为<code>QPushButton</code>的<code>clicked()</code>信号实际上是有一个参数的。Lambda 表达式中的<code>qDebug()</code>类似于<code>cout</code>，将后面的字符串打印到标准输出。</p>
+<h2><span id="3-添加动作">3. 添加动作</span></h2><p>Qt 使用<code>QAction</code>类作为动作。顾名思义，这个类就是代表了窗口的一个“动作”，这个动作可能显示在菜单，作为一个菜单项，当用户点击该菜单项，对用户的点击做出响应；也可能在工具栏，作为一个工具栏按钮，用户点击这个按钮就可以执行相应的操作。有一点值得注意：无论是出现在菜单栏还是工具栏，用户选择之后，所执行的动作应该都是一样的。因此，Qt 并没有专门的菜单项类，只是使用一个<code>QAction</code>类，抽象出公共的动作。当我们把<code>QAction</code>对象添加到菜单，就显示成一个菜单项，添加到工具栏，就显示成一个工具按钮。用户可以通过点击菜单项、点击工具栏按钮、点击快捷键来激活这个动作。</p>
+<p><code>QAction</code>包含了图标、菜单文字、快捷键、状态栏文字、浮动帮助等信息。当把一个<code>QAction</code>对象添加到程序中时，Qt 自己选择使用哪个属性来显示，无需我们关心。同时，Qt 能够保证把<code>QAction</code>对象添加到不同的菜单、工具栏时，显示内容是同步的。也就是说，如果我们在菜单中修改了<code>QAction</code>的图标，那么在工具栏上面这个<code>QAction</code>所对应的按钮的图标也会同步修改。</p>
+<p>示例：</p>
+<pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; mainwindow.h
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
+
+#include &lt;QMainWindow&gt;
+
+class MainWindow : public QMainWindow
+&#123;
+    Q_OBJECT
+public:
+    MainWindow(QWidget *parent &#x3D; 0);
+    ~MainWindow();
+
+private:
+    void open();
+
+    QAction *openAction;
+&#125;;
+
+#endif &#x2F;&#x2F; MAINWINDOW_H
+
+&#x2F;&#x2F; &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; mainwindow.cpp
+#include &lt;QAction&gt;
+#include &lt;QMenuBar&gt;
+#include &lt;QMessageBox&gt;
+#include &lt;QStatusBar&gt;
+#include &lt;QToolBar&gt;
+
+#include &quot;mainwindow.h&quot;
+
+MainWindow::MainWindow(QWidget *parent) :
+    QMainWindow(parent)
+&#123;
+    setWindowTitle(tr(&quot;Main Window&quot;));
+
+    openAction &#x3D; new QAction(QIcon(&quot;:&#x2F;images&#x2F;doc-open&quot;), tr(&quot;&amp;Open...&quot;), this);
+    openAction-&gt;setShortcuts(QKeySequence::Open);
+    openAction-&gt;setStatusTip(tr(&quot;Open an existing file&quot;));
+    connect(openAction, &amp;QAction::triggered, this, &amp;MainWindow::open);
+
+    QMenu *file &#x3D; menuBar()-&gt;addMenu(tr(&quot;&amp;File&quot;));
+    file-&gt;addAction(openAction);
+
+    QToolBar *toolBar &#x3D; addToolBar(tr(&quot;&amp;File&quot;));
+    toolBar-&gt;addAction(openAction);
+
+    statusBar() ;
+&#125;
+
+MainWindow::~MainWindow()
+&#123;
+&#125;
+
+void MainWindow::open()
+&#123;
+    QMessageBox::information(this, tr(&quot;Information&quot;), tr(&quot;Open&quot;));
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>上面的代码分别属于两个文件：mainwindow.h 和 mainwindow.cpp。为了让 MainWindow 运行起来，我们还需要修改 main() 函数如下：</p>
+<pre class="line-numbers language-none"><code class="language-none">int main(int argc, char *argv[])
+&#123;
+    QApplication app(argc, argv);
+
+    MainWindow win;
+    win.show();
+
+    return app.exec();
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img lazyload src="/images/loading.svg" data-src="http://files.devbean.net/images/2012/08/mw-action.png" alt="Main Window with Action"></p>
+<p>首先，我们在<code>MainWindow</code>类中添加了一个私有函数<code>open()</code>和一个私有变量<code>openAction</code>。在 MainWindow 的构造函数中，第一行我们调用了<code>setWindowTitle()</code>，设置主窗口的标题。注意我们的文本使用<code>tr()</code>函数，这是一个用于 Qt 国际化的函数。在后续章节中我们可以看到，我们可以使用 Qt 提供的国际化工具，将<code>tr()</code>函数的字符串提取出来，进行国际化。由于所需进行国际化的文本应该被大多数人认识，所以，<code>tr()</code>函数里面一般会是英文文本。</p>
+<p>然后，我们在堆上创建了<code>openAction</code>对象。在<code>QAction</code>构造函数，我们传入了一个图标、一个文本和 this 指针。我们将在后面的文章中解释 this 指针的含义。</p>
+<p><code>QAction</code>第二个参数中，文本值前面有一个 &amp;，意味着这将成为一个快捷键。注意看截图中 File 的 F 有一个下划线。下面一句，我们使用了<code>setShortcut()</code>函数，用于说明这个<code>QAction</code>的快捷键。</p>
+<p><code>setStatusTip()</code>则实现了当用户鼠标滑过这个 action 时，会在主窗口下方的状态栏显示相应的提示。</p>
+<p>后面的<code>connect()</code>函数，将这个<code>QAction</code>的<code>triggered()</code>信号与<code>MainWindow</code>类的<code>open()</code>函数连接起来。当用户点击了这个<code>QAction</code>时，会自动触发<code>MainWindow</code>的<code>open()</code>函数。这是我们之前已经了解过的。</p>
+<p>下面的<code>menuBar()</code>、<code>toolBar()</code>和<code>statusBar()</code>三个是<code>QMainWindow</code>的函数，用于创建并返回菜单栏、工具栏和状态栏。我们可以从代码清楚地看出，我们向菜单栏添加了一个 File 菜单，并且把这个<code>QAction</code>对象添加到这个菜单；同时新增加了一个 File 工具栏，也把<code>QAction</code>对象添加到了这个工具栏。我们可以看到，在菜单中，这个对象被显示成一个菜单项，在工具栏变成了一个按钮。至于状态栏，则是出现在窗口最下方，用于显示动作对象的提示信息的。</p>
+<p>我们看这个代码片段：</p>
+<pre class="line-numbers language-none"><code class="language-none">openAction &#x3D; new QAction(QIcon(&quot;:&#x2F;images&#x2F;doc-open&quot;), tr(&quot;&amp;Open...&quot;), this);
+openAction-&gt;setShortcuts(QKeySequence::Open);
+openAction-&gt;setStatusTip(tr(&quot;Open an existing file&quot;));
+connect(openAction, &amp;QAction::triggered, this, &amp;MainWindow::open);
+
+QMenu *file &#x3D; menuBar()-&gt;addMenu(tr(&quot;&amp;File&quot;));
+file-&gt;addAction(openAction);
+
+QToolBar *toolBar &#x3D; addToolBar(tr(&quot;&amp;File&quot;));
+toolBar-&gt;addAction(openAction);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>使用<code>menuBar()</code>函数，Qt 为我们创建了一个菜单栏。<code>menuBar()</code>是<code>QMainWindow</code>提供的函数，因此你是不会在<code>QWidget</code>或者<code>QDialog</code>中找到它的。这个函数会返回窗口的菜单栏，如果没有菜单栏则会新创建一个。这也就解释了，为什么我们可以直接使用<code>menuBar()</code>函数的返回值，毕竟我们并没有创建一个菜单栏对象啊！原来，这就是<code>menuBar()</code>为我们创建好并且返回了的。</p>
+<p>Qt 中，表示菜单的类是<code>QMenuBar</code>（你应该已经想到这个名字了）。<code>QMenuBar</code>代表的是窗口最上方的一条菜单栏。我们使用其<code>addMenu()</code>函数为其添加菜单。</p>
+<p>当我们创建出来了菜单对象时，就可以把<code>QAction</code>添加到这个菜单上面，也就是<code>addAction()</code>函数的作用。</p>
+<p><code>QToolBar</code>部分非常类似。顾名思义，<code>QToolBar</code>就是工具栏。我们使用的是<code>addToolBar()</code>函数添加新的工具栏。为什么前面一个是<code>menuBar()</code>而现在的是<code>addToolBar()</code>呢？因为一个窗口只有一个菜单栏，但是却可能有多个工具栏。如果我们将代码修改一下：</p>
+<pre class="line-numbers language-none"><code class="language-none">QToolBar *toolBar &#x3D; addToolBar(tr(&quot;&amp;File&quot;));
+toolBar-&gt;addAction(openAction);
+
+QToolBar *toolBar2 &#x3D; addToolBar(tr(&quot;Tool Bar 2&quot;));
+toolBar2-&gt;addAction(openAction);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img lazyload src="/images/loading.svg" data-src="http://files.devbean.net/images/2012/09/qtoolbar-2.png" alt="在 QMainWindow 中添加两个 QToolBar"></p>
+<h2><span id="4-布局管理">4. 布局管理</span></h2><p>看一个例子：</p>
+<pre class="line-numbers language-none"><code class="language-none">int main(int argc, char *argv[])
+&#123;
+    QApplication app(argc, argv);
+
+    QWidget window;
+    window.setWindowTitle(&quot;Enter your age&quot;);
+
+    QSpinBox *spinBox &#x3D; new QSpinBox(&amp;window);
+    QSlider *slider &#x3D; new QSlider(Qt::Horizontal, &amp;window);
+    spinBox-&gt;setRange(0, 130);
+    slider-&gt;setRange(0, 130);
+
+    QObject::connect(slider, &amp;QSlider::valueChanged, spinBox, &amp;QSpinBox::setValue);
+    void (QSpinBox:: *spinBoxSignal)(int) &#x3D; &amp;QSpinBox::valueChanged;
+    QObject::connect(spinBox, spinBoxSignal, slider, &amp;QSlider::setValue);
+    spinBox-&gt;setValue(35);
+
+    QHBoxLayout *layout &#x3D; new QHBoxLayout;
+    layout-&gt;addWidget(spinBox);
+    layout-&gt;addWidget(slider);
+    window.setLayout(layout);
+
+    window.show();
+
+    return app.exec();
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img lazyload src="/images/loading.svg" data-src="http://files.devbean.net/images/2012/09/layout-demo.png" alt="Qt Layout 原始大小示例"></p>
+<p>我们在这段代码中引入了两个新的组件：<code>QSpinBox</code>和<code>QSlider</code>。<code>QSpinBox</code>就是只能输入数字的输入框，并且带有上下箭头的步进按钮。<code>QSlider</code>则是带有滑块的滑竿。我们可以从上面的截图中清楚地辨别出这两个组件。当我们创建了这两个组件的实例之后，我们使用<code>setRange()</code>函数设置其范围。既然我们的窗口标题是“Enter your age（输入你的年龄）”，那么把 range（范围）设置为 0 到 130 应该足够了。</p>
+<p>注意connect里参数的顺序不能对调。编译器认为<code>QSpinBox::valueChanged</code>是一个 overloaded 的函数。我们看一下<code>QSpinBox</code>的文档发现，<code>QSpinBox</code>的确有两个信号：</p>
+<ul>
+<li><code>void valueChanged(int)</code></li>
+<li><code>void valueChanged(const QString &amp;)</code></li>
+</ul>
+<p>当我们使用<code>&amp;QSpinBox::valueChanged</code>取函数指针时，编译器不知道应该取哪一个函数（记住前面我们介绍过的，经过 moc 预处理后，signal 也是一个普通的函数。）的地址，因此报错。解决的方法很简单，编译器不是不能确定哪一个函数吗？那么我们就显式指定一个函数。方法就是，我们创建一个函数指针，这个函数指针参数指定为 int：</p>
+<pre class="line-numbers language-none"><code class="language-none">void (QSpinBox:: *spinBoxSignal)(int) &#x3D; &amp;QSpinBox::valueChanged;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>然后我们将这个函数指针作为 signal，与 QSlider 的函数连接。</p>
+<p>下面的代码，我们创建了一个<code>QHBoxLayout</code>对象。显然，这就是一个布局管理器。然后将这两个组件都添加到这个布局管理器，并且把该布局管理器设置为窗口的布局管理器。这些代码看起来都是顺理成章的，应该很容易明白。并且，布局管理器很聪明地做出了正确的行为：保持<code>QSpinBox</code>宽度不变，自动拉伸<code>QSlider</code>的宽度。</p>
+<p>Qt 提供了几种布局管理器供我们选择：</p>
+<ul>
+<li><code>QHBoxLayout</code>：按照水平方向从左到右布局；</li>
+<li><code>QVBoxLayout</code>：按照竖直方向从上到下布局；</li>
+<li><code>QGridLayout</code>：在一个网格中进行布局，类似于 HTML 的 table；</li>
+<li><code>QFormLayout</code>：按照表格布局，每一行前面是一段文本，文本后面跟随一个组件（通常是输入框），类似 HTML 的 form；</li>
+<li><code>QStackedLayout</code>：层叠的布局，允许我们将几个组件按照 Z 轴方向堆叠，可以形成向导那种一页一页的效果。</li>
+</ul>
+<h2><span id="5-文件对话框">5. 文件对话框</span></h2><p><code>QMessageBox</code> Qt标准对话框。</p>
+<p>下面讨论另外一个标准对话框：<code>QFileDialog</code>，文件对话框。下面例子将使用<code>QFileDialog</code>打开一个文本文件，并将修改过的文件保存到硬盘。</p>
+<p>首先创建一个带有文本编辑功能的窗口：</p>
+<pre class="line-numbers language-none"><code class="language-none">openAction &#x3D; new QAction(QIcon(&quot;:&#x2F;images&#x2F;file-open&quot;), tr(&quot;&amp;Open...&quot;), this);
+openAction-&gt;setShortcuts(QKeySequence::Open);
+openAction-&gt;setStatusTip(tr(&quot;Open an existing file&quot;));
+
+saveAction &#x3D; new QAction(QIcon(&quot;:&#x2F;images&#x2F;file-save&quot;), tr(&quot;&amp;Save...&quot;), this);
+saveAction-&gt;setShortcuts(QKeySequence::Save);
+saveAction-&gt;setStatusTip(tr(&quot;Save a new file&quot;));
+
+QMenu *file &#x3D; menuBar()-&gt;addMenu(tr(&quot;&amp;File&quot;));
+file-&gt;addAction(openAction);
+file-&gt;addAction(saveAction);
+
+QToolBar *toolBar &#x3D; addToolBar(tr(&quot;&amp;File&quot;));
+toolBar-&gt;addAction(openAction);
+toolBar-&gt;addAction(saveAction);
+
+textEdit &#x3D; new QTextEdit(this);
+setCentralWidget(textEdit);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>在菜单和工具栏添加了两个动作：打开和保存。在这里我们添加了一个QTextEdit类，用于显示富文本文件，不仅仅可以显示文本，还可以显示图片和表格等等，在这里先实现纯文本文件。<code>QMainWindow</code>有个<code>setCentralWidget()</code> 函数，可以将一个组件作为窗口的中心组件放在窗口中央显示区。在一个文本编辑器中，文本编辑区就是这个中心组件，用<code>QTextEdit</code>。</p>
+<p>在这里<code>connect()</code>的用法如下，为<code>QAction</code>对象添加响应的动作（我们希望打开新的窗口）：</p>
+<pre class="line-numbers language-none"><code class="language-none">connect(openAction, &amp;QAction::triggered, this, &amp;MainWindow::openFile);
+connect(saveAction, &amp;QAction::triggered, this, &amp;MainWindow::saveFile);
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>重点看<code>openFile()</code>和<code>saveFile()</code>两个函数的代码：</p>
+<pre class="line-numbers language-none"><code class="language-none">void MainWindow::openFile()
+&#123;
+    QString path &#x3D; QFileDialog::getOpenFileName(this, tr(&quot;Open File&quot;), &quot;.&quot;, tr(&quot;Text Files(*.txt)&quot;));
+    if(!path.isEmpty()) &#123;
+        QFile file(path);
+        if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) &#123;
+            QMessageBox::warning(this, tr(&quot;Read File&quot;), tr(&quot;Cannot open file:\n%1&quot;).arg(path));
+            return;
+        &#125;
+        QTextStream in(&amp;file);
+        textEdit-&gt;setText(in.readAll());
+        file.close();
+    &#125; else &#123;
+        QMessageBox::warning(this, tr(&quot;Path&quot;), tr(&quot;You did not select any file.&quot;));
+    &#125;
+&#125;
+
+void MainWindow::saveFile()
+&#123;
+    QString path &#x3D; QFileDialog::getSaveFileName(this, tr(&quot;Save File&quot;), &quot;.&quot;, tr(&quot;Text Files(*.txt)&quot;));
+    if(!path.isEmpty()) &#123;
+        QFile file(path);
+        if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) &#123;
+            QMessageBox::warning(this, tr(&quot;Write File&quot;), tr(&quot;Cannot open file:\n%1&quot;).arg(path));
+            return;
+        &#125;
+        QTextStream out(&amp;file);
+        out &lt;&lt; textEdit-&gt;toPlainText();
+        file.close();
+    &#125; else &#123;
+        QMessageBox::warning(this, tr(&quot;Path&quot;), tr(&quot;You did not select any file.&quot;));
+    &#125;
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>具体看一下期中的函数：在<code>openFile()</code>函数中，我们用<code>QFileDialog::getOpenFileName()</code>来获取需要打开的文件的路径。函数如下：</p>
+<pre class="line-numbers language-none"><code class="language-none">QString getOpenFileName(QWidget * parent &#x3D; 0,
+                        const QString &amp; caption &#x3D; QString(),
+                        const QString &amp; dir &#x3D; QString(),
+                        const QString &amp; filter &#x3D; QString(),
+                        QString * selectedFilter &#x3D; 0,
+                        Options options &#x3D; 0)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>parent：父窗口。我们前面介绍过，Qt 的标准对话框提供静态函数，用于返回一个模态对话框（在一定程度上这就是外观模式的一种体现）；</li>
+<li>caption：对话框标题；</li>
+<li>dir：对话框打开时的默认目录，“.” 代表程序运行目录，“&#x2F;” 代表当前盘符的根目录（特指 Windows 平台；Linux 平台当然就是根目录），这个参数也可以是平台相关的，比如“C:\”等；</li>
+<li>filter：过滤器。我们使用文件对话框可以浏览很多类型的文件，但是，很多时候我们仅希望打开特定类型的文件。比如，文本编辑器希望打开文本文件，图片浏览器希望打开图片文件。过滤器就是用于过滤特定的后缀名。如果我们使用“Image Files(<em>.jpg <em>.png)”，则只能显示后缀名是 jpg 或者 png 的文件。如果需要多个过滤器，使用“;;”分割，比如“JPEG Files(</em>.jpg);;PNG Files(</em>.png)”；</li>
+<li>selectedFilter：默认选择的过滤器；</li>
+<li>options：对话框的一些参数设定，比如只显示文件夹等等，它的取值是<code>enum QFileDialog::Option</code>，每个选项可以使用 | 运算组合起来。</li>
+</ul>
+<p><code>QFileDialog::getOpenFileName()</code>返回值是选择的文件路径。我们将其赋值给 path。通过判断 path 是否为空，可以确定用户是否选择了某一文件。只有当用户选择了一个文件时，我们才执行下面的操作。</p>
+<p>我们创建一个QFile对象，将用户选择的文件路径传递给这个对象。用<code>QFile::open()</code>来打开这个文件，其参数是指定的打开方式，这里我们使用只读方式和文本方式。<code>QFile::open()</code>打开成功返回true, 由此继续下面的操作：使用<code>QTextStream::readAll()</code>读取文件所有内容赋值给<code>QtextEdit</code>显示出来。</p>
+<p><code>saveFile()</code>函数也是类似的，最后一步我们用&lt;&lt;重定向，将QTextEdit的内容输出到一个文件中。文件操作我们后续介绍。</p>
+<h2><span id="6-事件">6. 事件</span></h2><p>事件（event）是由系统或者 Qt 本身在不同的时刻发出的。当用户按下鼠标、敲下键盘，或者是窗口需要重新绘制的时候，都会发出一个相应的事件。一些事件在对用户操作做出响应时发出，如键盘事件等；另一些事件则是由系统自动发出，如计时器事件。</p>
+<p>Qt 中的事件和信号槽却并不是可以相互替代的。信号由具体的对象发出，然后会马上交给由<code>connect()</code>函数连接的槽进行处理；而对于事件，Qt 使用一个事件队列对所有发出的事件进行维护，当新的事件产生时，会被追加到事件队列的尾部。前一个事件完成后，取出后面的事件进行处理。但是，必要的时候，Qt 的事件也可以不进入事件队列，而是直接处理。信号一旦发出，对应的槽函数一定会被执行。但是，事件则可以使用“事件过滤器”进行过滤，对于有些事件进行额外的处理，另外的事件则不关心。总的来说，如果我们<strong>使用</strong>组件，我们关心的是信号槽；如果我们<strong>自定义</strong>组件，我们关心的是事件。因为我们可以通过事件来改变组件的默认操作。比如，如果我们要自定义一个能够响应鼠标事件的<code>EventLabel</code>，我们就需要重写<code>QLabel</code>的鼠标事件，做出我们希望的操作，有可能还得在恰当的时候发出一个类似按钮的<code>clicked()</code>信号（如果我们希望让这个<code>EventLabel</code>能够被其它组件使用）或者其它的信号。</p>
+<p>下面看一个例子：</p>
+<pre class="line-numbers language-none"><code class="language-none">class EventLabel : public QLabel
+&#123;
+protected:
+    void mouseMoveEvent(QMouseEvent *event);
+    void mousePressEvent(QMouseEvent *event);
+    void mouseReleaseEvent(QMouseEvent *event);
+&#125;;
+
+void EventLabel::mouseMoveEvent(QMouseEvent *event)
+&#123;
+    this-&gt;setText(QString(&quot;&lt;center&gt;&lt;h1&gt;Move: (%1, %2)&lt;&#x2F;h1&gt;&lt;&#x2F;center&gt;&quot;)
+                  .arg(QString::number(event-&gt;x()), QString::number(event-&gt;y())));
+&#125;
+
+void EventLabel::mousePressEvent(QMouseEvent *event)
+&#123;
+    this-&gt;setText(QString(&quot;&lt;center&gt;&lt;h1&gt;Press: (%1, %2)&lt;&#x2F;h1&gt;&lt;&#x2F;center&gt;&quot;)
+                  .arg(QString::number(event-&gt;x()), QString::number(event-&gt;y())));
+&#125;
+
+void EventLabel::mouseReleaseEvent(QMouseEvent *event)
+&#123;
+    QString msg;
+    msg.sprintf(&quot;&lt;center&gt;&lt;h1&gt;Release: (%d, %d)&lt;&#x2F;h1&gt;&lt;&#x2F;center&gt;&quot;,
+                event-&gt;x(), event-&gt;y());
+    this-&gt;setText(msg);
+&#125;
+
+int main(int argc, char *argv[])
+&#123;
+    QApplication a(argc, argv);
+
+    EventLabel *label &#x3D; new EventLabel;
+    label-&gt;setWindowTitle(&quot;MouseEvent Demo&quot;);
+    label-&gt;resize(300, 200);
+    label-&gt;show();
+
+    return a.exec();
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><code>EventLabel</code>继承了<code>QLabel</code>，覆盖了<code>mousePressEvent()</code>、<code>mouseMoveEvent()</code>和<code>mouseReleaseEvent()</code>三个函数。我们并没有添加什么功能，只是在鼠标按下（press）、鼠标移动（move）和鼠标释放（release）的时候，把当前鼠标的坐标值显示在这个<code>Label</code>上面。由于<code>QLabel</code>是支持 HTML 代码的，因此我们直接使用了 HTML 代码来格式化文字。</p>
+<p><code>QString</code>的<code>arg()</code>函数可以自动替换掉<code>QString</code>中出现的占位符。其占位符以 % 开始，后面是占位符的位置，例如 %1，%2 这种。</p>
+<pre class="line-numbers language-none"><code class="language-none">QString(&quot;[%1, %2]&quot;).arg(x, y);<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>语句将会使用 x 替换 %1，y 替换 %2，因此，这个语句生成的<code>QString</code>为 [x, y]。</p>
+<p>在<code>mouseReleaseEvent()</code>函数中，我们使用了另外一种<code>QString</code>的构造方法。我们使用类似 C 风格的格式化函数<code>sprintf()</code>来构造<code>QString</code>。</p>
+<h2><span id="7-绘制">7. 绘制</span></h2><p>Qt 的绘图系统允许使用相同的 API 在屏幕和其它打印设备上进行绘制。整个绘图系统基于<code>QPainter</code>，<code>QPainterDevice</code>和<code>QPaintEngine</code>三个类。</p>
+<p><code>QPainter</code>用来执行绘制的操作；<code>QPaintDevice</code>是一个二维空间的抽象，这个二维空间允许<code>QPainter</code>在其上面进行绘制，也就是<code>QPainter</code>工作的空间；<code>QPaintEngine</code>提供了画笔（<code>QPainter</code>）在不同的设备上进行绘制的统一的接口。<code>QPaintEngine</code>类应用于<code>QPainter</code>和<code>QPaintDevice</code>之间，通常对开发人员是透明的。除非你需要自定义一个设备，否则你是不需要关心<code>QPaintEngine</code>这个类的。我们可以把<code>QPainter</code>理解成画笔；把<code>QPaintDevice</code>理解成使用画笔的地方，比如纸张、屏幕等；而对于纸张、屏幕而言，肯定要使用不同的画笔绘制，为了统一使用一种画笔，我们设计了<code>QPaintEngine</code>类，这个类让不同的纸张、屏幕都能使用一种画笔。</p>
+<p>下面我们通过一个实例来介绍<code>QPainter</code>的使用：</p>
+<pre class="line-numbers language-none"><code class="language-none">class PaintedWidget : public QWidget
+&#123;
+    Q_OBJECT
+public:
+    PaintedWidget(QWidget *parent &#x3D; 0);
+protected:
+    void paintEvent(QPaintEvent *);
+&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">PaintedWidget::PaintedWidget(QWidget *parent) :
+    QWidget(parent)
+&#123;
+    resize(800, 600);
+    setWindowTitle(tr(&quot;Paint Demo&quot;));
+&#125;
+
+void PaintedWidget::paintEvent(QPaintEvent *)
+&#123;
+    QPainter painter(this);
+    painter.drawLine(80, 100, 650, 500);
+    painter.setPen(Qt::red);
+    painter.drawRect(10, 10, 100, 400);
+    painter.setPen(QPen(Qt::green, 5));
+    painter.setBrush(Qt::blue);
+    painter.drawEllipse(50, 150, 400, 200);
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>在构造函数中，我们仅仅设置了窗口的大小和标题。而<code>paintEvent()</code>函数则是绘制的代码。首先，我们在栈上创建了一个<code>QPainter</code>对象，也就是说，每次运行<code>paintEvent()</code>函数的时候，都会重建这个<code>QPainter</code>对象。</p>
+<p><code>QPainter</code>接收一个<code>QPaintDevice</code>指针作为参数。<code>QPaintDevice</code>有很多子类，比如<code>QImage</code>，以及<code>QWidget</code>。注意回忆一下，<code>QPaintDevice</code>可以理解成要在哪里去绘制，而现在我们希望画在这个组件，因此传入的是 this 指针。</p>
+<p><code>QPainter</code>有很多以 draw 开头的函数，用于各种图形的绘制，比如这里的<code>drawLine()</code>，<code>drawRect()</code>以及<code>drawEllipse()</code>等。当绘制轮廓线时，使用<code>QPainter</code>的<code>pen()</code>属性。比如，我们调用了<code>painter.setPen(Qt::red)</code>将 pen 设置为红色，则下面绘制的矩形具有红色的轮廓线。接下来，我们将 pen 修改为绿色，5 像素宽（<code>painter.setPen(QPen(Qt::green, 5))</code>），又设置了画刷为蓝色。这时候再调用 draw 函数，则是具有绿色 5 像素宽轮廓线、蓝色填充的椭圆。</p>
+<p><img lazyload src="/images/loading.svg" data-src="http://files.devbean.net/images/2012/10/paint-demo.png" alt="绘制示例"></p>
+<p>将<code>QPainter</code>的逻辑坐标与<code>QPaintDevice</code>的物理坐标进行映射的工作，是由<code>QPainter</code>的变换矩阵（transformation matrix）、视口（viewport）和窗口（window）完成的。</p>
+<p>在 Qt 的坐标系统中，每个像素占据 1x1 的空间。你可以把它想象成一张方格纸，每个小格都是1个像素。方格的焦点定义了坐标，也就是说，像素 (x, y) 的中心位置其实是在 (x + 0.5, y + 0.5) 的位置上。这个坐标系统实际上是一个“半像素坐标系”。我们可以通过下面的示意图来理解这种坐标系：</p>
+<p><img lazyload src="/images/loading.svg" data-src="http://files.devbean.net/images/2012/11/coordinate-system-demo.png" alt="坐标系统图示"></p>
+<p>进行一个示例：</p>
+<pre class="line-numbers language-none"><code class="language-none">void PaintDemo::paintEvent(QPaintEvent *)
+&#123;
+    QPainter painter(this);
+    painter.fillRect(10, 10, 50, 100, Qt::red);
+    painter.save();
+    painter.translate(100, 0); &#x2F;&#x2F; 向右平移 100px
+    painter.fillRect(10, 10, 50, 100, Qt::yellow);
+    painter.restore();
+    painter.save();
+    painter.translate(300, 0); &#x2F;&#x2F; 向右平移 300px
+    painter.rotate(30); &#x2F;&#x2F; 顺时针旋转 30 度
+    painter.fillRect(10, 10, 50, 100, Qt::green);
+    painter.restore();
+    painter.save();
+    painter.translate(400, 0); &#x2F;&#x2F; 向右平移 400px
+    painter.scale(2, 3); &#x2F;&#x2F; 横坐标单位放大 2 倍，纵坐标放大 3 倍
+    painter.fillRect(10, 10, 50, 100, Qt::blue);
+    painter.restore();
+    painter.save();
+    painter.translate(600, 0); &#x2F;&#x2F; 向右平移 600px
+    painter.shear(0, 1); &#x2F;&#x2F; 横向不变，纵向扭曲 1 倍
+    painter.fillRect(10, 10, 50, 100, Qt::cyan);
+    painter.restore();
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>Qt 提供了四种坐标变换：平移 translate，旋转 rotate，缩放 scale 和扭曲 shear。在这段代码中，我们首先在 (10, 10) 点绘制一个红色的 50x100 矩形。保存当前状态，将坐标系平移到 (100, 0)，绘制一个黄色的矩形。注意，<code>translate()</code>操作平移的是坐标系，不是矩形。因此，我们还是在 (10, 10) 点绘制一个 50x100 矩形，现在，它跑到了右侧的位置。然后恢复先前状态，也就是把坐标系重新设为默认坐标系（相当于进行<code>translate(-100, 0)</code>），再进行下面的操作。之后也是类似的。由于我们只是保存了默认坐标系的状态，因此我们之后的<code>translate()</code>横坐标值必须增加，否则就会覆盖掉前面的图形。所有这些操作都是针对坐标系的，因此在绘制时，我们提供的矩形的坐标参数都是不变的。</p>
+<p><img lazyload src="/images/loading.svg" data-src="http://files.devbean.net/images/2012/11/coordinate-transformations-demo.png" alt="坐标变换示例"></p>
+
+        </div>
+
+        
+
+        
+            <ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/notes/">#notes</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+  <div class="recommended-article px-2 sm:px-6 md:px-8">
+   <div class="recommended-desktop">
+    <div class="recommended-article-header text-xl md:text-3xl font-bold mt-10">
+     <i aria-hidden="true"></i><span>推荐阅读</span>
+    </div>
+    <div class="recommended-article-group"><a class="recommended-article-item" href="/2021/12/02/Data Analysis and Visualization of POI Checking-In Data/" title="Data Analysis and Visualization of POI Checking-In Data" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="Data Analysis and Visualization of POI Checking-In Data" class="!max-w-none">
+  <span class="title">Data Analysis and Visualization of POI Checking-In Data</span>
+</a><a class="recommended-article-item" href="/2022/08/08/新机开荒指北/" title="新机开荒指北" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="新机开荒指北" class="!max-w-none">
+  <span class="title">新机开荒指北</span>
+</a><a class="recommended-article-item" href="/2023/10/23/Paper-Reading-Notes/" title="Paper-Reading-Notes" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="Paper-Reading-Notes" class="!max-w-none">
+  <span class="title">Paper-Reading-Notes</span>
+</a></div>
+   </div>
+   <div class="recommended-mobile">
+   <div class="recommended-article-header text-xl md:text-3xl font-bold mt-10">
+     <i aria-hidden="true"></i><span>推荐阅读</span>
+   </div>
+   <div class="recommended-article-group"><a class="recommended-article-item" href="/2021/12/02/Data Analysis and Visualization of POI Checking-In Data/" title="Data Analysis and Visualization of POI Checking-In Data" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="Data Analysis and Visualization of POI Checking-In Data" class="!max-w-none">
+  <span class="title">Data Analysis and Visualization of POI Checking-In Data</span>
+</a><a class="recommended-article-item" href="/2022/08/08/新机开荒指北/" title="新机开荒指北" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="新机开荒指北" class="!max-w-none">
+  <span class="title">新机开荒指北</span>
+</a></div>
+   </div>
+  </div>
+
+        
+            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="prev"
+                        rel="prev"
+                        href="/2021/12/02/Data%20Analysis%20and%20Visualization%20of%20POI%20Checking-In%20Data/"
+                        >
+                            <span class="left arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">Data Analysis and Visualization of POI Checking-In Data</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="next"
+                        rel="next"
+                        href="/2021/10/02/%E5%A4%A7%E4%B8%80%E4%B8%8B%E6%80%BB%E7%BB%93/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">大一下总结</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+            <div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+                <div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        评论
+    </div>
+    
+
+        
+            
+    <div id="waline"></div>
+    <script type="module" data-swup-reload-script>
+      import { init } from '/js/libs/waline.mjs';
+
+      function loadWaline() {
+        init({
+          el: '#waline',
+          serverURL: 'https://example.example.com',
+          lang: 'zh-CN',
+          dark: 'body[class~="dark-mode"]',
+          reaction: false,
+          requiredMeta: ['nick', 'mail'],
+          emoji: [],
+          recaptchaV3Key: "wasd",
+          
+        });
+      }
+
+      if (typeof swup !== 'undefined') {
+        loadWaline();
+      } else {
+        window.addEventListener('DOMContentLoaded', loadWaline);
+      }
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">目录</div>
+        <div class="page-title">Qt GUI Programming Notes</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">Qt GUI Programming Notes</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">1. hello,world</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">2. 信号槽</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">3. 添加动作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">4. 布局管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">5. 文件对话框</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">6. 事件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">7. 绘制</span></a></li></ol></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2024&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">Yevzh</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        共撰写了 17 篇文章
+                    </span>
+                    
+                        <span>
+                            共 109.9k 字
+                        </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">访问人数</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">总访问量</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 驱动</span>
+            <span class="text-sm lg:block">主题&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.7.1</a></span>
+        </div>
+        
+        
+            <div>
+                博客已运行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小时 <span class="odometer" id="runtime_minutes"></span> 分钟 <span class="odometer" id="runtime_seconds"></span> 秒
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="站内搜索您需要的内容..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+    
+<script src="/js/libs/Swup.min.js"></script>
+
+<script src="/js/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+
+
+
+<script src="/js/tools/imageViewer.js" type="module"></script>
+
+<script src="/js/utils.js" type="module"></script>
+
+<script src="/js/main.js" type="module"></script>
+
+<script src="/js/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/layouts/categoryList.js" type="module"></script>
+
+
+
+    
+<script src="/js/tools/localSearch.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/tools/runtime.js"></script>
+
+    
+<script src="/js/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js" type="module"></script>
+
+
+
+
+
+
+
+
+    
+<script src="/js/libs/anime.min.js"></script>
+
+
+
+<div class="post-scripts" data-swup-reload-script>
+    
+        
+<script src="/js/tools/tocToggle.js" type="module"></script>
+
+<script src="/js/layouts/toc.js" type="module"></script>
+
+<script src="/js/plugins/tabs.js" type="module"></script>
+
+    
+</div>
+
+
+</body>
+</html>
